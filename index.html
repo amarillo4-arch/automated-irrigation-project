@@ -7,8 +7,38 @@
 <style>
 :root{--green:#176b45;--green2:#218653;--pale:#e8f4eb;--bg:#f4f7f4;--ink:#203128;--muted:#68776e;--line:#dfe8e0;--white:#fff;--amber:#fff2d2;--red:#fde8e7;--shadow:0 5px 22px rgba(23,65,39,.06)}
 *{box-sizing:border-box}body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;background:var(--bg);color:var(--ink)}button,input,select,textarea{font:inherit}button{cursor:pointer;border:0;border-radius:9px;padding:10px 14px;background:var(--green);color:white;font-weight:600}button:hover{filter:brightness(.95)}button:disabled{opacity:.5;cursor:not-allowed}.btn-light{background:#e8efe9;color:#234b35}.btn-danger{background:#b83c36}.btn-outline{background:white;color:var(--green);border:1px solid #cbd9ce}.layout{display:grid;grid-template-columns:245px 1fr;min-height:100vh}.sidebar{background:#123e2b;color:white;padding:22px 15px;display:flex;flex-direction:column;gap:22px}.brand{display:flex;gap:11px;align-items:center;padding:0 8px}.brand-icon{font-size:27px}.brand h1{font-size:15px;margin:0 0 4px}.brand small{color:#c5ded0;font-size:11px}.nav{display:grid;gap:7px}.nav button{background:transparent;color:#d8e9df;text-align:left;padding:12px;border-radius:9px;font-weight:500}.nav button.active,.nav button:hover{background:#285940;color:white}.sidebar-note{margin-top:auto;font-size:12px;line-height:1.55;color:#c5ded0;background:#1b4b35;padding:13px;border-radius:10px}.main{min-width:0}.topbar{height:auto;min-height:75px;background:white;border-bottom:1px solid var(--line);padding:18px 28px;display:flex;justify-content:space-between;align-items:center;gap:14px}.topbar h2{margin:0;font-size:20px}.topbar p{margin:5px 0 0;font-size:12px;color:var(--muted)}.demo-pill{font-size:12px;background:var(--amber);color:#805a12;padding:8px 11px;border-radius:20px;font-weight:700;white-space:nowrap}.content{max-width:1400px;margin:auto;padding:26px}.page{display:none}.page.active{display:block}.page-head{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;flex-wrap:wrap;margin-bottom:20px}.page-head h3{margin:0 0 7px;font-size:24px}.page-head p{margin:0;color:var(--muted);font-size:14px}.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:15px}.grid-2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.card{background:white;border:1px solid var(--line);border-radius:14px;padding:19px;box-shadow:var(--shadow);min-width:0}.card h4{margin:0 0 13px;font-size:15px}.metric-label{color:var(--muted);font-size:13px;display:flex;justify-content:space-between;gap:8px}.metric{font-size:31px;font-weight:750;margin:12px 0 7px;letter-spacing:-.7px}.metric-foot{font-size:12px;color:var(--muted)}.metric-icon{float:right;background:var(--pale);border-radius:10px;padding:10px;font-size:20px}.bar{height:10px;background:#e9eee9;border-radius:10px;overflow:hidden;margin:14px 0 9px}.bar span{display:block;height:100%;background:var(--green2);width:0;transition:width .25s}.status{display:inline-block;padding:6px 9px;border-radius:20px;font-size:12px;font-weight:700;background:var(--pale);color:var(--green)}.status.warn{background:var(--amber);color:#805a12}.status.bad{background:var(--red);color:#a12e2a}.status.neutral{background:#edf0ed;color:#526158}.muted{color:var(--muted);font-size:13px;line-height:1.5}.controls{display:flex;gap:9px;flex-wrap:wrap;margin-top:14px}.form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.field{display:flex;flex-direction:column;gap:6px}.field label{font-size:13px;font-weight:650}.field input,.field select,.field textarea,input.search{width:100%;padding:11px;border:1px solid #ccd9ce;border-radius:8px;background:white;color:var(--ink)}.field input:focus,.field select:focus,.field textarea:focus,input.search:focus{outline:2px solid #b5dbc1;border-color:var(--green)}.table-wrap{overflow:auto}table{width:100%;border-collapse:collapse;min-width:570px}th,td{text-align:left;padding:12px 10px;border-bottom:1px solid #edf1ed;font-size:13px;vertical-align:middle}th{color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.5px;background:#fbfcfb}tbody tr:last-child td{border-bottom:0}.table-actions{display:flex;gap:6px}.table-actions button{padding:7px 9px;font-size:12px}.section-row{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin:22px 0 13px}.section-row h4{margin:0;font-size:16px}.empty{text-align:center;padding:28px;color:var(--muted);font-size:13px}.notice{border-radius:10px;padding:13px 15px;line-height:1.5;font-size:13px;margin:16px 0;background:#eef5ef;border:1px solid #d8e8da}.notice.warn{background:var(--amber);border-color:#f1dfab;color:#75530f}.notice.red{background:var(--red);border-color:#f3cecb;color:#8f2d28}.toggle-line{display:flex;align-items:center;justify-content:space-between;gap:15px;padding:13px 0;border-bottom:1px solid #edf1ed}.toggle-line:last-child{border-bottom:0}.toggle-line strong{font-size:13px}.toggle-line p{margin:4px 0 0;color:var(--muted);font-size:12px}.switch{position:relative;width:46px;height:26px;flex:none}.switch input{opacity:0;width:0;height:0}.slider{position:absolute;inset:0;border-radius:20px;background:#bdc8bf;cursor:pointer;transition:.2s}.slider:before{content:"";position:absolute;width:18px;height:18px;left:4px;top:4px;border-radius:50%;background:white;transition:.2s}.switch input:checked+.slider{background:var(--green)}.switch input:checked+.slider:before{transform:translateX(20px)}.plant-badge{font-size:20px;margin-bottom:10px}.plant-card h4{margin-bottom:6px}.plant-card p{margin:4px 0}.progress-note{display:flex;justify-content:space-between;font-size:12px;color:var(--muted)}.footer{text-align:center;color:#839087;font-size:11px;padding:25px}.toast{position:fixed;right:20px;bottom:20px;background:#173f2b;color:white;padding:13px 17px;border-radius:10px;box-shadow:var(--shadow);opacity:0;transform:translateY(8px);transition:.2s;pointer-events:none;z-index:10}.toast.show{opacity:1;transform:translateY(0)}.small{font-size:12px}.right{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.chart{display:flex;align-items:flex-end;gap:8px;height:150px;padding:15px 4px 0;border-bottom:1px solid var(--line)}.chart-col{flex:1;min-width:12px;text-align:center;height:100%;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;gap:6px}.chart-bar{width:min(34px,75%);min-height:3px;background:#3d9a67;border-radius:5px 5px 0 0}.chart-col small{font-size:10px;color:var(--muted)}.hidden{display:none!important}
+
+/* Added My Profile page styles */
+.profile-layout{display:grid;grid-template-columns:minmax(220px, .8fr) minmax(0, 2fr);gap:16px}
+.profile-intro{text-align:center}
+.profile-avatar{width:104px;height:104px;margin:4px auto 14px;border-radius:50%;display:grid;place-items:center;background:var(--pale);color:var(--green);font-size:42px;font-weight:800;border:4px solid #d8eadc}
+.profile-intro h4{font-size:20px;margin:0 0 5px}
+.profile-role{color:var(--green);font-weight:700;font-size:13px;margin:0 0 12px}
+.profile-detail{padding:11px 0;border-bottom:1px solid #edf1ed;font-size:13px}
+.profile-detail:last-child{border-bottom:0}
+.profile-detail strong{display:block;margin-bottom:4px}
+.profile-list{margin:0;padding-left:19px;color:var(--ink);font-size:13px;line-height:1.8}
+.profile-project{padding:14px 0;border-bottom:1px solid #edf1ed}
+.profile-project:last-child{border-bottom:0}
+.profile-project h5{font-size:14px;margin:0 0 6px}
+.profile-project p{font-size:13px;line-height:1.6;color:var(--muted);margin:4px 0}
+.profile-tags{display:flex;flex-wrap:wrap;gap:7px}
+.profile-tag{background:var(--pale);color:var(--green);padding:6px 9px;border-radius:20px;font-size:12px;font-weight:600}
+.profile-actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:16px}.profile-actions a,.page-head a.btn-outline{display:inline-block;padding:10px 14px;border-radius:9px;text-decoration:none;font-size:13px;font-weight:600}
+@media(max-width:700px){.profile-layout{grid-template-columns:1fr}}
+
 @media(max-width:1000px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.layout{grid-template-columns:205px 1fr}.content{padding:20px}}
 @media(max-width:700px){.layout{grid-template-columns:1fr}.sidebar{padding:13px;gap:12px}.brand{padding:3px 7px}.nav{display:flex;overflow:auto}.nav button{white-space:nowrap;padding:10px}.sidebar-note{display:none}.topbar{padding:15px 18px}.content{padding:16px}.grid,.grid-2{grid-template-columns:1fr}.page-head h3{font-size:21px}.form-grid{grid-template-columns:1fr}.metric{font-size:28px}}
+
+/* My Profile images and certificate gallery */
+.profile-photo{width:150px;height:185px;object-fit:cover;object-position:center top;border-radius:12px;border:4px solid #d8eadc;display:block;margin:4px auto 16px;box-shadow:0 4px 14px rgba(23,65,39,.12)}
+.certificate-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.certificate-item{margin:0;padding:10px;border:1px solid var(--line);border-radius:10px;background:#fbfdfb}
+.certificate-item a{display:block}
+.certificate-item img{display:block;width:100%;height:auto;max-height:270px;object-fit:contain;background:white;border-radius:6px}
+.certificate-item figcaption{text-align:center;font-size:12px;color:var(--muted);font-weight:650;padding:8px 2px 2px}
+@media(max-width:700px){.certificate-gallery{grid-template-columns:1fr}.profile-photo{width:140px;height:170px}}
+
 </style>
 </head>
 <body>
@@ -22,6 +52,7 @@
       <button data-page="history">◷ &nbsp; Watering History</button>
       <button data-page="reports">▤ &nbsp; Reports</button>
       <button data-page="settings">⚙ &nbsp; Settings</button>
+      <button data-page="profile">👤 &nbsp; My Profile</button>
     </nav>
     <div class="sidebar-note"><strong>Project location</strong><br>Brgy. Union, Mahaplag Elementary School<br><br><span>Prototype mode: readings and pump actions are simulated.</span></div>
   </aside>
@@ -93,6 +124,120 @@
         </div>
         <div class="notice"><strong>Privacy and limitations:</strong> This prototype stores its records in local browser storage on this device. It has no online database, multi-user login, cloud synchronization, or real hardware integration. Do not use it to store sensitive personal information.</div>
       </section>
+
+      <!-- Added My Profile page. Existing website sections are unchanged. -->
+      <section class="page" id="page-profile">
+        <div class="page-head">
+          <div><h3>My Profile</h3><p>Personal information, education, skills, projects, and certifications.</p></div>
+          <a class="btn-outline" href="my_profile.pdf" target="_blank" rel="noopener">View Resume PDF</a>
+        </div>
+
+        <div class="profile-layout">
+          <div class="card profile-intro">
+            <img class="profile-photo" src="assets/profile-photo.jpeg" alt="Maicris Monte De Ramos profile photo">
+            <h4>Maicris Monte De Ramos</h4>
+            <p class="profile-role">WEB DEVELOPER</p>
+            <p class="muted">BSIT student with practical experience in web development, database management, and system design.</p>
+            <div class="profile-actions">
+              <a class="btn-outline" href="my_profile.pdf" target="_blank" rel="noopener">Open full resume</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <h4>Profile</h4>
+            <p class="muted">BSIT student with practical experience in web development, database management, and system design. Built functional capstone projects including web-based and IoT systems.</p>
+            <div class="profile-detail"><strong>Phone</strong>09208889004</div>
+            <div class="profile-detail"><strong>Address</strong>Union, Mahaplag, Leyte</div>
+            <div class="profile-detail"><strong>Education</strong>Bachelor of Science in Information Technology<br>Currently enrolled · Section BSIT-302</div>
+          </div>
+
+          <div class="card">
+            <h4>Technical Skills</h4>
+            <div class="profile-detail"><strong>Programming and Web</strong>
+              <div class="profile-tags"><span class="profile-tag">HTML</span><span class="profile-tag">CSS</span><span class="profile-tag">PHP (basic)</span></div>
+            </div>
+            <div class="profile-detail"><strong>Database</strong>
+              <div class="profile-tags"><span class="profile-tag">MySQL (basic)</span><span class="profile-tag">Database creation</span><span class="profile-tag">Database management</span></div>
+            </div>
+            <div class="profile-detail"><strong>Tools</strong>
+              <div class="profile-tags"><span class="profile-tag">Visual Studio Code</span><span class="profile-tag">XAMPP</span></div>
+            </div>
+            <div class="profile-detail"><strong>Other Skills</strong>
+              <ul class="profile-list"><li>Systems analysis and design</li><li>Software design and project management</li><li>Systems documentation</li><li>Website testing and troubleshooting</li></ul>
+            </div>
+            <div class="profile-detail"><strong>Soft Skills</strong>
+              <div class="profile-tags"><span class="profile-tag">Teamwork</span><span class="profile-tag">Communication</span><span class="profile-tag">Adaptability</span><span class="profile-tag">Time management</span></div>
+            </div>
+          </div>
+
+          <div class="card">
+            <h4>Projects</h4>
+            <div class="profile-project">
+              <h5>Development of an Automated Irrigation System for Vegetable Plants at Brgy. Union, Mahaplag Elementary School</h5>
+              <p><strong>Capstone Project</strong></p>
+              <p>Developed a sensor-based automated irrigation system that detects soil moisture and waters vegetable plants automatically only when needed.</p>
+              <p>Enables consistent plant care even when no one is present at school, reduces water waste, and supports the school garden with minimal manual effort.</p>
+            </div>
+          </div>
+
+          <div class="card">
+            <h4>Certifications</h4>
+            <p class="muted">Completed through Coursera</p>
+            <ul class="profile-list">
+              <li><strong>Software Engineering: Software Design and Project Management</strong><br>The Hong Kong University of Science and Technology · Oct 2026</li>
+              <li><strong>Object-Oriented Design</strong><br>University of Alberta · Oct 2026</li>
+              <li><strong>Design Patterns</strong><br>University of Alberta · Oct 2026</li>
+              <li><strong>Software Architecture</strong><br>University of Alberta · Oct 2026</li>
+              <li><strong>Data Analytics Foundations: Turn Data Into Insights</strong><br>IBM · Oct 2026</li>
+              <li><strong>Foundations of User Experience (UX) Design</strong><br>Google · Oct 2026</li>
+            </ul>
+            <div class="notice">Verified Coursera course certificates, October 2026.</div>
+          </div>
+
+          <div class="card">
+            <h4>My Certificate Images</h4>
+            <p class="muted">Click any certificate to open the full-size image.</p>
+            <div class="certificate-gallery">
+            <figure class="certificate-item">
+              <a href="assets/certificate-1.png" target="_blank" rel="noopener">
+                <img src="assets/certificate-1.png" alt="Software Architecture certificate" loading="lazy">
+              </a>
+              <figcaption>Software Architecture</figcaption>
+            </figure>
+            <figure class="certificate-item">
+              <a href="assets/certificate-2.png" target="_blank" rel="noopener">
+                <img src="assets/certificate-2.png" alt="Software Design and Project Management certificate" loading="lazy">
+              </a>
+              <figcaption>Software Design and Project Management</figcaption>
+            </figure>
+            <figure class="certificate-item">
+              <a href="assets/certificate-3.png" target="_blank" rel="noopener">
+                <img src="assets/certificate-3.png" alt="Design Patterns certificate" loading="lazy">
+              </a>
+              <figcaption>Design Patterns</figcaption>
+            </figure>
+            <figure class="certificate-item">
+              <a href="assets/certificate-4.png" target="_blank" rel="noopener">
+                <img src="assets/certificate-4.png" alt="Data Analytics Foundations: Turn Data Into Insights certificate" loading="lazy">
+              </a>
+              <figcaption>Data Analytics Foundations: Turn Data Into Insights</figcaption>
+            </figure>
+            <figure class="certificate-item">
+              <a href="assets/certificate-5.png" target="_blank" rel="noopener">
+                <img src="assets/certificate-5.png" alt="Foundations of User Experience (UX) Design certificate" loading="lazy">
+              </a>
+              <figcaption>Foundations of User Experience (UX) Design</figcaption>
+            </figure>
+            <figure class="certificate-item">
+              <a href="assets/certificate-6.png" target="_blank" rel="noopener">
+                <img src="assets/certificate-6.png" alt="Object-Oriented Design certificate" loading="lazy">
+              </a>
+              <figcaption>Object-Oriented Design</figcaption>
+            </figure>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
     <footer class="footer">Automated Irrigation Management System · Capstone prototype · Simulation only</footer>
   </div>
@@ -136,7 +281,7 @@ function showToast(message){
 function navigate(page){
   document.querySelectorAll(".page").forEach(p=>p.classList.toggle("active",p.id==="page-"+page));
   document.querySelectorAll(".nav button").forEach(b=>b.classList.toggle("active",b.dataset.page===page));
-  const names={dashboard:"Dashboard",plants:"Vegetable Management",irrigation:"Irrigation Control",history:"Watering History",reports:"Reports",settings:"Settings"};
+  const names={dashboard:"Dashboard",plants:"Vegetable Management",irrigation:"Irrigation Control",history:"Watering History",reports:"Reports",settings:"Settings",profile:"My Profile"};
   document.getElementById("topTitle").textContent=names[page]||"Dashboard";
   if(page==="plants")renderPlants();
   if(page==="history")renderHistory();
