@@ -7,52 +7,64 @@
 <style>
 :root{--green:#176b45;--green2:#218653;--pale:#e8f4eb;--bg:#f4f7f4;--ink:#203128;--muted:#68776e;--line:#dfe8e0;--white:#fff;--amber:#fff2d2;--red:#fde8e7;--shadow:0 5px 22px rgba(23,65,39,.06)}
 *{box-sizing:border-box}body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;background:var(--bg);color:var(--ink)}button,input,select,textarea{font:inherit}button{cursor:pointer;border:0;border-radius:9px;padding:10px 14px;background:var(--green);color:white;font-weight:600}button:hover{filter:brightness(.95)}button:disabled{opacity:.5;cursor:not-allowed}.btn-light{background:#e8efe9;color:#234b35}.btn-danger{background:#b83c36}.btn-outline{background:white;color:var(--green);border:1px solid #cbd9ce}.layout{display:grid;grid-template-columns:245px 1fr;min-height:100vh}.sidebar{background:#123e2b;color:white;padding:22px 15px;display:flex;flex-direction:column;gap:22px}.brand{display:flex;gap:11px;align-items:center;padding:0 8px}.brand-icon{font-size:27px}.brand h1{font-size:15px;margin:0 0 4px}.brand small{color:#c5ded0;font-size:11px}.nav{display:grid;gap:7px}.nav button{background:transparent;color:#d8e9df;text-align:left;padding:12px;border-radius:9px;font-weight:500}.nav button.active,.nav button:hover{background:#285940;color:white}.sidebar-note{margin-top:auto;font-size:12px;line-height:1.55;color:#c5ded0;background:#1b4b35;padding:13px;border-radius:10px}.main{min-width:0}.topbar{height:auto;min-height:75px;background:white;border-bottom:1px solid var(--line);padding:18px 28px;display:flex;justify-content:space-between;align-items:center;gap:14px}.topbar h2{margin:0;font-size:20px}.topbar p{margin:5px 0 0;font-size:12px;color:var(--muted)}.demo-pill{font-size:12px;background:var(--amber);color:#805a12;padding:8px 11px;border-radius:20px;font-weight:700;white-space:nowrap}.content{max-width:1400px;margin:auto;padding:26px}.page{display:none}.page.active{display:block}.page-head{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;flex-wrap:wrap;margin-bottom:20px}.page-head h3{margin:0 0 7px;font-size:24px}.page-head p{margin:0;color:var(--muted);font-size:14px}.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:15px}.grid-2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.card{background:white;border:1px solid var(--line);border-radius:14px;padding:19px;box-shadow:var(--shadow);min-width:0}.card h4{margin:0 0 13px;font-size:15px}.metric-label{color:var(--muted);font-size:13px;display:flex;justify-content:space-between;gap:8px}.metric{font-size:31px;font-weight:750;margin:12px 0 7px;letter-spacing:-.7px}.metric-foot{font-size:12px;color:var(--muted)}.metric-icon{float:right;background:var(--pale);border-radius:10px;padding:10px;font-size:20px}.bar{height:10px;background:#e9eee9;border-radius:10px;overflow:hidden;margin:14px 0 9px}.bar span{display:block;height:100%;background:var(--green2);width:0;transition:width .25s}.status{display:inline-block;padding:6px 9px;border-radius:20px;font-size:12px;font-weight:700;background:var(--pale);color:var(--green)}.status.warn{background:var(--amber);color:#805a12}.status.bad{background:var(--red);color:#a12e2a}.status.neutral{background:#edf0ed;color:#526158}.muted{color:var(--muted);font-size:13px;line-height:1.5}.controls{display:flex;gap:9px;flex-wrap:wrap;margin-top:14px}.form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.field{display:flex;flex-direction:column;gap:6px}.field label{font-size:13px;font-weight:650}.field input,.field select,.field textarea,input.search{width:100%;padding:11px;border:1px solid #ccd9ce;border-radius:8px;background:white;color:var(--ink)}.field input:focus,.field select:focus,.field textarea:focus,input.search:focus{outline:2px solid #b5dbc1;border-color:var(--green)}.table-wrap{overflow:auto}table{width:100%;border-collapse:collapse;min-width:570px}th,td{text-align:left;padding:12px 10px;border-bottom:1px solid #edf1ed;font-size:13px;vertical-align:middle}th{color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.5px;background:#fbfcfb}tbody tr:last-child td{border-bottom:0}.table-actions{display:flex;gap:6px}.table-actions button{padding:7px 9px;font-size:12px}.section-row{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin:22px 0 13px}.section-row h4{margin:0;font-size:16px}.empty{text-align:center;padding:28px;color:var(--muted);font-size:13px}.notice{border-radius:10px;padding:13px 15px;line-height:1.5;font-size:13px;margin:16px 0;background:#eef5ef;border:1px solid #d8e8da}.notice.warn{background:var(--amber);border-color:#f1dfab;color:#75530f}.notice.red{background:var(--red);border-color:#f3cecb;color:#8f2d28}.toggle-line{display:flex;align-items:center;justify-content:space-between;gap:15px;padding:13px 0;border-bottom:1px solid #edf1ed}.toggle-line:last-child{border-bottom:0}.toggle-line strong{font-size:13px}.toggle-line p{margin:4px 0 0;color:var(--muted);font-size:12px}.switch{position:relative;width:46px;height:26px;flex:none}.switch input{opacity:0;width:0;height:0}.slider{position:absolute;inset:0;border-radius:20px;background:#bdc8bf;cursor:pointer;transition:.2s}.slider:before{content:"";position:absolute;width:18px;height:18px;left:4px;top:4px;border-radius:50%;background:white;transition:.2s}.switch input:checked+.slider{background:var(--green)}.switch input:checked+.slider:before{transform:translateX(20px)}.plant-badge{font-size:20px;margin-bottom:10px}.plant-card h4{margin-bottom:6px}.plant-card p{margin:4px 0}.progress-note{display:flex;justify-content:space-between;font-size:12px;color:var(--muted)}.footer{text-align:center;color:#839087;font-size:11px;padding:25px}.toast{position:fixed;right:20px;bottom:20px;background:#173f2b;color:white;padding:13px 17px;border-radius:10px;box-shadow:var(--shadow);opacity:0;transform:translateY(8px);transition:.2s;pointer-events:none;z-index:10}.toast.show{opacity:1;transform:translateY(0)}.small{font-size:12px}.right{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.chart{display:flex;align-items:flex-end;gap:8px;height:150px;padding:15px 4px 0;border-bottom:1px solid var(--line)}.chart-col{flex:1;min-width:12px;text-align:center;height:100%;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;gap:6px}.chart-bar{width:min(34px,75%);min-height:3px;background:#3d9a67;border-radius:5px 5px 0 0}.chart-col small{font-size:10px;color:var(--muted)}.hidden{display:none!important}
-
-/* Added My Profile page styles */
-.profile-layout{display:grid;grid-template-columns:minmax(220px, .8fr) minmax(0, 2fr);gap:16px}
-.profile-intro{text-align:center}
-.profile-avatar{width:104px;height:104px;margin:4px auto 14px;border-radius:50%;display:grid;place-items:center;background:var(--pale);color:var(--green);font-size:42px;font-weight:800;border:4px solid #d8eadc}
-.profile-intro h4{font-size:20px;margin:0 0 5px}
-.profile-role{color:var(--green);font-weight:700;font-size:13px;margin:0 0 12px}
-.profile-detail{padding:11px 0;border-bottom:1px solid #edf1ed;font-size:13px}
-.profile-detail:last-child{border-bottom:0}
-.profile-detail strong{display:block;margin-bottom:4px}
-.profile-list{margin:0;padding-left:19px;color:var(--ink);font-size:13px;line-height:1.8}
-.profile-project{padding:14px 0;border-bottom:1px solid #edf1ed}
-.profile-project:last-child{border-bottom:0}
-.profile-project h5{font-size:14px;margin:0 0 6px}
-.profile-project p{font-size:13px;line-height:1.6;color:var(--muted);margin:4px 0}
-.profile-tags{display:flex;flex-wrap:wrap;gap:7px}
-.profile-tag{background:var(--pale);color:var(--green);padding:6px 9px;border-radius:20px;font-size:12px;font-weight:600}
-.profile-actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:16px}.profile-actions a,.page-head a.btn-outline{display:inline-block;padding:10px 14px;border-radius:9px;text-decoration:none;font-size:13px;font-weight:600}
-@media(max-width:700px){.profile-layout{grid-template-columns:1fr}}
-
+#authGate{min-height:100vh;display:grid;place-items:center;padding:24px;background:linear-gradient(135deg,#e8f4eb,#f4f7f4)}
+.auth-card{width:min(100%,440px);background:white;border:1px solid var(--line);border-radius:16px;padding:28px;box-shadow:var(--shadow)}
+.auth-brand{display:flex;align-items:center;gap:12px;margin-bottom:22px}.auth-brand-icon{font-size:32px}.auth-brand h1{font-size:19px;margin:0 0 4px}.auth-brand p{margin:0;color:var(--muted);font-size:13px}
+.auth-card h2{font-size:22px;margin:0 0 7px}.auth-card>p{margin:0 0 20px;color:var(--muted);font-size:13px;line-height:1.5}
+.auth-card .field{margin-top:13px}.auth-card .controls{display:grid}.auth-card .controls button{width:100%}
+.auth-switch{margin-top:18px;text-align:center;font-size:13px;color:var(--muted)}.auth-switch button{padding:0;background:none;color:var(--green);text-decoration:underline}
+.auth-error{min-height:18px;margin:12px 0 0;color:#a12e2a;font-size:13px}.auth-notice{margin-top:18px;padding:11px 12px;border:1px solid #f1dfab;background:var(--amber);border-radius:9px;color:#75530f;font-size:12px;line-height:1.5}
+.account-panel{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:11px 9px;background:#1b4b35;border-radius:10px;color:#e4f1e8;font-size:12px}.account-panel strong{display:block;max-width:145px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.account-panel button{padding:7px 9px;font-size:11px}
+#appShell{display:none}#appShell.is-authenticated{display:grid}
 @media(max-width:1000px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.layout{grid-template-columns:205px 1fr}.content{padding:20px}}
 @media(max-width:700px){.layout{grid-template-columns:1fr}.sidebar{padding:13px;gap:12px}.brand{padding:3px 7px}.nav{display:flex;overflow:auto}.nav button{white-space:nowrap;padding:10px}.sidebar-note{display:none}.topbar{padding:15px 18px}.content{padding:16px}.grid,.grid-2{grid-template-columns:1fr}.page-head h3{font-size:21px}.form-grid{grid-template-columns:1fr}.metric{font-size:28px}}
-
-/* My Profile images and certificate gallery */
-.profile-photo{width:150px;height:185px;object-fit:cover;object-position:center top;border-radius:12px;border:4px solid #d8eadc;display:block;margin:4px auto 16px;box-shadow:0 4px 14px rgba(23,65,39,.12)}
-.certificate-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
-.certificate-item{margin:0;padding:10px;border:1px solid var(--line);border-radius:10px;background:#fbfdfb}
-.certificate-item a{display:block}
-.certificate-item img{display:block;width:100%;height:auto;max-height:270px;object-fit:contain;background:white;border-radius:6px}
-.certificate-item figcaption{text-align:center;font-size:12px;color:var(--muted);font-weight:650;padding:8px 2px 2px}
-@media(max-width:700px){.certificate-gallery{grid-template-columns:1fr}.profile-photo{width:140px;height:170px}}
-
+button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #78b58d;outline-offset:2px}
+.card{transition:box-shadow .18s ease,transform .18s ease}.card:hover{box-shadow:0 9px 28px rgba(23,65,39,.1)}
+.password-row{display:flex;gap:8px}.password-row input{min-width:0;flex:1}.password-toggle{background:#e8efe9;color:#234b35;padding:9px 12px}
+.password-meter{width:100%;height:8px;margin:6px 0 2px;accent-color:var(--green)}.password-strength{font-size:12px;color:var(--muted)}
+.skip-link{position:absolute;left:12px;top:-50px;background:white;color:var(--green);padding:10px 12px;border-radius:8px;z-index:20}.skip-link:focus{top:12px}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important}}
 </style>
 </head>
 <body>
-<div class="layout">
+<a class="skip-link" href="#mainContent">Skip to garden system</a>
+<section id="authGate" aria-label="Account access">
+  <div class="auth-card">
+    <div class="auth-brand"><span class="auth-brand-icon">🌱</span><div><h1>GreenFlow Irrigation</h1><p>Brgy. Union, Mahaplag Elementary School</p></div></div>
+    <form id="loginForm">
+      <h2>Sign in</h2>
+      <p>Sign in to manage the school garden irrigation system.</p>
+      <div class="field"><label for="loginEmail">Email address</label><input id="loginEmail" type="email" autocomplete="username" required maxlength="160" placeholder="you@example.com"></div>
+      <div class="field"><label for="loginPassword">Password</label><div class="password-row"><input id="loginPassword" type="password" autocomplete="current-password" required minlength="8" maxlength="128" placeholder="Enter your password"><button class="password-toggle" type="button" aria-controls="loginPassword" aria-pressed="false" onclick="togglePassword('loginPassword',this)">Show</button></div></div>
+      <div class="controls"><button type="submit">Sign in</button></div>
+      <p class="auth-error" id="loginError" role="alert"></p>
+      <div class="auth-switch">New to GreenFlow? <button type="button" onclick="showAuthForm('signup')">Create an account</button></div>
+    </form>
+    <form id="signupForm" class="hidden">
+      <h2>Create account</h2>
+      <p>Register an account to use this browser-based prototype.</p>
+      <div class="field"><label for="signupName">Full name</label><input id="signupName" autocomplete="name" required maxlength="80" placeholder="Your name"></div>
+      <div class="field"><label for="signupEmail">Email address</label><input id="signupEmail" type="email" autocomplete="email" required maxlength="160" placeholder="you@example.com"></div>
+      <div class="field"><label for="signupPassword">Password</label><div class="password-row"><input id="signupPassword" type="password" autocomplete="new-password" required minlength="8" maxlength="128" placeholder="At least 8 characters" oninput="updatePasswordStrength(this.value)"><button class="password-toggle" type="button" aria-controls="signupPassword" aria-pressed="false" onclick="togglePassword('signupPassword',this)">Show</button></div><meter class="password-meter" id="passwordStrength" min="0" max="5" value="0" aria-label="Password strength"></meter><span id="passwordStrengthText" class="password-strength">Use 8 or more characters; a longer password is safer.</span></div>
+      <div class="field"><label for="signupConfirm">Confirm password</label><div class="password-row"><input id="signupConfirm" type="password" autocomplete="new-password" required minlength="8" maxlength="128" placeholder="Enter the password again"><button class="password-toggle" type="button" aria-controls="signupConfirm" aria-pressed="false" onclick="togglePassword('signupConfirm',this)">Show</button></div></div>
+      <div class="controls"><button type="submit">Create account</button></div>
+      <p class="auth-error" id="signupError" role="alert"></p>
+      <div class="auth-switch">Already registered? <button type="button" onclick="showAuthForm('login')">Sign in</button></div>
+    </form>
+    <div class="auth-notice"><strong>Prototype account notice:</strong> Accounts are saved in this browser only. This is not secure authentication and does not sync between devices. Do not reuse a sensitive password.</div>
+  </div>
+</section>
+<div class="layout" id="appShell">
   <aside class="sidebar">
     <div class="brand"><div class="brand-icon">🌱</div><div><h1>GreenFlow Irrigation</h1><small>School Garden System</small></div></div>
+    <div class="account-panel"><div>Signed in as<strong id="signedInName"></strong></div><button class="btn-light" type="button" onclick="logout()">Log out</button></div>
     <nav class="nav" aria-label="Main navigation">
-      <button class="active" data-page="dashboard">▦ &nbsp; Dashboard</button>
+      <button class="active" data-page="dashboard" aria-current="page">▦ &nbsp; Dashboard</button>
       <button data-page="plants">🌿 &nbsp; Vegetable Management</button>
       <button data-page="irrigation">💧 &nbsp; Irrigation Control</button>
       <button data-page="history">◷ &nbsp; Watering History</button>
       <button data-page="reports">▤ &nbsp; Reports</button>
       <button data-page="settings">⚙ &nbsp; Settings</button>
-      <button data-page="profile">👤 &nbsp; My Profile</button>
     </nav>
     <div class="sidebar-note"><strong>Project location</strong><br>Brgy. Union, Mahaplag Elementary School<br><br><span>Prototype mode: readings and pump actions are simulated.</span></div>
   </aside>
@@ -63,12 +75,12 @@
       <div class="demo-pill">● SIMULATION MODE</div>
     </header>
 
-    <main class="content">
+    <main class="content" id="mainContent">
       <section class="page active" id="page-dashboard">
         <div class="page-head"><div><h3>Garden overview</h3><p>Check simulated soil moisture, pump status, and garden activity.</p></div><button class="btn-outline" onclick="simulateDry()">Test dry soil</button></div>
         <div class="notice warn"><strong>Prototype notice:</strong> This is a software simulation. It does not read a real sensor or operate a real water pump.</div>
         <div class="grid">
-          <div class="card"><div class="metric-label">Soil moisture <span class="metric-icon">💧</span></div><div class="metric" id="dashMoisture">55%</div><div class="bar"><span id="dashBar"></span></div><span class="status" id="dashSoilStatus">Moderate</span><p class="metric-foot">Simulated reading</p></div>
+          <div class="card"><div class="metric-label">Soil moisture <span class="metric-icon">💧</span></div><div class="metric" id="dashMoisture">55%</div><div class="bar" id="dashMoistureBar" role="progressbar" aria-label="Simulated soil moisture" aria-valuemin="0" aria-valuemax="100" aria-valuenow="55"><span id="dashBar"></span></div><span class="status" id="dashSoilStatus">Moderate</span><p class="metric-foot">Simulated reading</p></div>
           <div class="card"><div class="metric-label">Pump status <span class="metric-icon">🚿</span></div><div class="metric" id="dashPump">OFF</div><span class="status neutral" id="dashPumpBadge">Standby</span><p class="metric-foot" id="dashPumpNote">No watering currently simulated</p></div>
           <div class="card"><div class="metric-label">Vegetable types <span class="metric-icon">🌿</span></div><div class="metric" id="dashPlantCount">3</div><p class="metric-foot">Managed in this browser</p></div>
           <div class="card"><div class="metric-label">Watering starts <span class="metric-icon">📋</span></div><div class="metric" id="dashEvents">0</div><p class="metric-foot">Saved event history</p></div>
@@ -90,7 +102,7 @@
       <section class="page" id="page-irrigation">
         <div class="page-head"><div><h3>Irrigation control</h3><p>Adjust the demonstration settings and test automatic watering logic.</p></div><span class="status warn">Simulation only</span></div>
         <div class="grid-2">
-          <div class="card"><h4>Moisture simulator</h4><div class="metric" id="controlMoisture">55%</div><div class="bar"><span id="controlBar"></span></div><span id="controlSoil" class="status">Moderate</span><p class="muted">Change the simulated moisture value to test how the system responds. This is not a real sensor reading.</p><div class="field"><label for="moistureSlider">Set simulated soil moisture</label><input id="moistureSlider" type="range" min="0" max="100" value="55" oninput="setMoistureFromSlider(this.value)"></div><div class="progress-note"><span>0% · Dry</span><span>100% · Very moist</span></div><div class="controls"><button class="btn-light" onclick="changeMoisture(-10)">− Make drier</button><button class="btn-light" onclick="changeMoisture(10)">＋ Add moisture</button><button class="btn-outline" onclick="randomMoisture()">Random test</button></div></div>
+          <div class="card"><h4>Moisture simulator</h4><div class="metric" id="controlMoisture">55%</div><div class="bar" id="controlMoistureBar" role="progressbar" aria-label="Simulated soil moisture" aria-valuemin="0" aria-valuemax="100" aria-valuenow="55"><span id="controlBar"></span></div><span id="controlSoil" class="status">Moderate</span><p class="muted">Change the simulated moisture value to test how the system responds. This is not a real sensor reading.</p><div class="field"><label for="moistureSlider">Set simulated soil moisture</label><input id="moistureSlider" type="range" min="0" max="100" value="55" oninput="setMoistureFromSlider(this.value)"></div><div class="progress-note"><span>0% · Dry</span><span>100% · Very moist</span></div><div class="controls"><button class="btn-light" onclick="changeMoisture(-10)">− Make drier</button><button class="btn-light" onclick="changeMoisture(10)">＋ Add moisture</button><button class="btn-outline" onclick="randomMoisture()">Random test</button></div></div>
           <div class="card"><h4>Pump simulation</h4><div class="metric" id="controlPump">OFF</div><span id="controlPumpBadge" class="status neutral">Standby</span><p id="controlPumpText" class="muted">Pump simulation is off.</p><div class="controls"><button id="manualStart" onclick="manualPump(true)">Start pump simulation</button><button id="manualStop" class="btn-light" onclick="manualPump(false)">Stop pump simulation</button></div><div class="notice warn">Manual control only changes the on-screen simulation. It cannot start or stop a physical pump.</div></div>
         </div>
         <div class="card" style="margin-top:16px"><h4>Automatic control</h4><div class="toggle-line"><div><strong>Automatic mode</strong><p>When ON, moisture thresholds determine the simulated pump state.</p></div><label class="switch"><input id="autoToggle" type="checkbox" checked onchange="setAutomatic(this.checked)"><span class="slider"></span></label></div><div class="form-grid" style="margin-top:16px"><div class="field"><label for="dryThreshold">Dry threshold (%)</label><input id="dryThreshold" type="number" min="0" max="95" value="35"></div><div class="field"><label for="targetMoisture">Target moisture (%)</label><input id="targetMoisture" type="number" min="5" max="100" value="60"></div></div><div class="controls"><button onclick="saveIrrigationSettings()">Save irrigation settings</button><button class="btn-outline" onclick="resetMoisture()">Reset moisture to 55%</button></div><p class="muted">The target must be higher than the dry threshold. These values are demonstration settings, not agricultural advice for every crop.</p></div>
@@ -124,120 +136,6 @@
         </div>
         <div class="notice"><strong>Privacy and limitations:</strong> This prototype stores its records in local browser storage on this device. It has no online database, multi-user login, cloud synchronization, or real hardware integration. Do not use it to store sensitive personal information.</div>
       </section>
-
-      <!-- Added My Profile page. Existing website sections are unchanged. -->
-      <section class="page" id="page-profile">
-        <div class="page-head">
-          <div><h3>My Profile</h3><p>Personal information, education, skills, projects, and certifications.</p></div>
-          <a class="btn-outline" href="my_profile.pdf" target="_blank" rel="noopener">View Resume PDF</a>
-        </div>
-
-        <div class="profile-layout">
-          <div class="card profile-intro">
-            <img class="profile-photo" src="assets/profile-photo.jpeg" alt="Maicris Monte De Ramos profile photo">
-            <h4>Maicris Monte De Ramos</h4>
-            <p class="profile-role">WEB DEVELOPER</p>
-            <p class="muted">BSIT student with practical experience in web development, database management, and system design.</p>
-            <div class="profile-actions">
-              <a class="btn-outline" href="my_profile.pdf" target="_blank" rel="noopener">Open full resume</a>
-            </div>
-          </div>
-
-          <div class="card">
-            <h4>Profile</h4>
-            <p class="muted">BSIT student with practical experience in web development, database management, and system design. Built functional capstone projects including web-based and IoT systems.</p>
-            <div class="profile-detail"><strong>Phone</strong>09208889004</div>
-            <div class="profile-detail"><strong>Address</strong>Union, Mahaplag, Leyte</div>
-            <div class="profile-detail"><strong>Education</strong>Bachelor of Science in Information Technology<br>Currently enrolled · Section BSIT-302</div>
-          </div>
-
-          <div class="card">
-            <h4>Technical Skills</h4>
-            <div class="profile-detail"><strong>Programming and Web</strong>
-              <div class="profile-tags"><span class="profile-tag">HTML</span><span class="profile-tag">CSS</span><span class="profile-tag">PHP (basic)</span></div>
-            </div>
-            <div class="profile-detail"><strong>Database</strong>
-              <div class="profile-tags"><span class="profile-tag">MySQL (basic)</span><span class="profile-tag">Database creation</span><span class="profile-tag">Database management</span></div>
-            </div>
-            <div class="profile-detail"><strong>Tools</strong>
-              <div class="profile-tags"><span class="profile-tag">Visual Studio Code</span><span class="profile-tag">XAMPP</span></div>
-            </div>
-            <div class="profile-detail"><strong>Other Skills</strong>
-              <ul class="profile-list"><li>Systems analysis and design</li><li>Software design and project management</li><li>Systems documentation</li><li>Website testing and troubleshooting</li></ul>
-            </div>
-            <div class="profile-detail"><strong>Soft Skills</strong>
-              <div class="profile-tags"><span class="profile-tag">Teamwork</span><span class="profile-tag">Communication</span><span class="profile-tag">Adaptability</span><span class="profile-tag">Time management</span></div>
-            </div>
-          </div>
-
-          <div class="card">
-            <h4>Projects</h4>
-            <div class="profile-project">
-              <h5>Development of an Automated Irrigation System for Vegetable Plants at Brgy. Union, Mahaplag Elementary School</h5>
-              <p><strong>Capstone Project</strong></p>
-              <p>Developed a sensor-based automated irrigation system that detects soil moisture and waters vegetable plants automatically only when needed.</p>
-              <p>Enables consistent plant care even when no one is present at school, reduces water waste, and supports the school garden with minimal manual effort.</p>
-            </div>
-          </div>
-
-          <div class="card">
-            <h4>Certifications</h4>
-            <p class="muted">Completed through Coursera</p>
-            <ul class="profile-list">
-              <li><strong>Software Engineering: Software Design and Project Management</strong><br>The Hong Kong University of Science and Technology · Oct 2026</li>
-              <li><strong>Object-Oriented Design</strong><br>University of Alberta · Oct 2026</li>
-              <li><strong>Design Patterns</strong><br>University of Alberta · Oct 2026</li>
-              <li><strong>Software Architecture</strong><br>University of Alberta · Oct 2026</li>
-              <li><strong>Data Analytics Foundations: Turn Data Into Insights</strong><br>IBM · Oct 2026</li>
-              <li><strong>Foundations of User Experience (UX) Design</strong><br>Google · Oct 2026</li>
-            </ul>
-            <div class="notice">Verified Coursera course certificates, October 2026.</div>
-          </div>
-
-          <div class="card">
-            <h4>My Certificate Images</h4>
-            <p class="muted">Click any certificate to open the full-size image.</p>
-            <div class="certificate-gallery">
-            <figure class="certificate-item">
-              <a href="assets/certificate-1.png" target="_blank" rel="noopener">
-                <img src="assets/certificate-1.png" alt="Software Architecture certificate" loading="lazy">
-              </a>
-              <figcaption>Software Architecture</figcaption>
-            </figure>
-            <figure class="certificate-item">
-              <a href="assets/certificate-2.png" target="_blank" rel="noopener">
-                <img src="assets/certificate-2.png" alt="Software Design and Project Management certificate" loading="lazy">
-              </a>
-              <figcaption>Software Design and Project Management</figcaption>
-            </figure>
-            <figure class="certificate-item">
-              <a href="assets/certificate-3.png" target="_blank" rel="noopener">
-                <img src="assets/certificate-3.png" alt="Design Patterns certificate" loading="lazy">
-              </a>
-              <figcaption>Design Patterns</figcaption>
-            </figure>
-            <figure class="certificate-item">
-              <a href="assets/certificate-4.png" target="_blank" rel="noopener">
-                <img src="assets/certificate-4.png" alt="Data Analytics Foundations: Turn Data Into Insights certificate" loading="lazy">
-              </a>
-              <figcaption>Data Analytics Foundations: Turn Data Into Insights</figcaption>
-            </figure>
-            <figure class="certificate-item">
-              <a href="assets/certificate-5.png" target="_blank" rel="noopener">
-                <img src="assets/certificate-5.png" alt="Foundations of User Experience (UX) Design certificate" loading="lazy">
-              </a>
-              <figcaption>Foundations of User Experience (UX) Design</figcaption>
-            </figure>
-            <figure class="certificate-item">
-              <a href="assets/certificate-6.png" target="_blank" rel="noopener">
-                <img src="assets/certificate-6.png" alt="Object-Oriented Design certificate" loading="lazy">
-              </a>
-              <figcaption>Object-Oriented Design</figcaption>
-            </figure>
-            </div>
-          </div>
-        </div>
-      </section>
     </main>
     <footer class="footer">Automated Irrigation Management System · Capstone prototype · Simulation only</footer>
   </div>
@@ -245,8 +143,11 @@
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 <script>
 const STORAGE_KEY = "greenflow_irrigation_v1";
+const AUTH_STORAGE_KEY = "greenflow_accounts_v1";
+const AUTH_SESSION_KEY = "greenflow_signed_in_email";
+const PASSWORD_ITERATIONS = 150000;
 const defaultState = {
-  moisture:55, automatic:true, pump:false, dry:35, target:60,
+  moisture:55, automatic:true, pump:false, dry:35, target:60, autoIncrease:true, moistureSamples:[55],
   plants:[
     {id:1,name:"Pechay",bed:"Garden Bed 1",date:"",notes:"Leafy vegetable"},
     {id:2,name:"Tomato",bed:"Garden Bed 2",date:"",notes:"Check soil moisture regularly"},
@@ -256,9 +157,142 @@ const defaultState = {
   projectLocation:"Brgy. Union, Mahaplag Elementary School", nextId:4
 };
 let state = loadState();
-let moistureSamples = [state.moisture];
+let moistureSamples = state.moistureSamples;
 let toastTimer;
+let irrigationTimer = null;
+let currentUser = null;
 function clone(obj){return JSON.parse(JSON.stringify(obj))}
+function readAccounts(){
+  const raw=localStorage.getItem(AUTH_STORAGE_KEY);
+  if(!raw)return [];
+  const accounts=JSON.parse(raw);
+  if(!Array.isArray(accounts))throw new Error("Saved account data is invalid.");
+  return accounts;
+}
+function saveAccounts(accounts){localStorage.setItem(AUTH_STORAGE_KEY,JSON.stringify(accounts))}
+function bytesToBase64(bytes){return btoa(Array.from(bytes,b=>String.fromCharCode(b)).join(""))}
+function base64ToBytes(value){return Uint8Array.from(atob(value),c=>c.charCodeAt(0))}
+async function hashPassword(password,salt){
+  if(!window.crypto?.subtle)throw new Error("Secure password hashing is unavailable in this browser. Open this page through HTTPS or localhost.");
+  const key=await crypto.subtle.importKey("raw",new TextEncoder().encode(password),"PBKDF2",false,["deriveBits"]);
+  const bits=await crypto.subtle.deriveBits({name:"PBKDF2",salt,iterations:PASSWORD_ITERATIONS,hash:"SHA-256"},key,256);
+  return new Uint8Array(bits);
+}
+function sameBytes(a,b){
+  if(a.length!==b.length)return false;
+  let difference=0;
+  for(let i=0;i<a.length;i++)difference|=a[i]^b[i];
+  return difference===0;
+}
+function showAuthForm(mode){
+  const signup=mode==="signup";
+  document.getElementById("loginForm").classList.toggle("hidden",signup);
+  document.getElementById("signupForm").classList.toggle("hidden",!signup);
+  document.getElementById("loginError").textContent="";
+  document.getElementById("signupError").textContent="";
+  document.querySelectorAll(".password-toggle").forEach(button=>{
+    const input=document.getElementById(button.getAttribute("aria-controls"));
+    input.type="password";button.textContent="Show";button.setAttribute("aria-pressed","false");
+  });
+  updatePasswordStrength(document.getElementById("signupPassword").value);
+  document.getElementById(signup?"signupName":"loginEmail").focus();
+}
+function togglePassword(id,button){
+  const input=document.getElementById(id),show=input.type==="password";
+  input.type=show?"text":"password";
+  button.textContent=show?"Hide":"Show";
+  button.setAttribute("aria-pressed",String(show));
+}
+function updatePasswordStrength(value){
+  const score=[value.length>=8,value.length>=12,/[a-z]/.test(value)&&/[A-Z]/.test(value),/\d/.test(value),/[^A-Za-z0-9]/.test(value)].filter(Boolean).length;
+  document.getElementById("passwordStrength").value=score;
+  document.getElementById("passwordStrengthText").textContent=score===0?"Use 8 or more characters; a longer password is safer.":score<=1?"Weak — use a longer password.":score<=2?"Fair — add length and variety.":score<=4?"Good — consider making it longer.":"Strong password.";
+}
+function setAuthError(id,message){document.getElementById(id).textContent=message}
+function startSession(account,persist=true){
+  if(persist){
+    try{sessionStorage.setItem(AUTH_SESSION_KEY,account.email)}
+    catch(e){
+      const errorId=document.getElementById("signupForm").classList.contains("hidden")?"loginError":"signupError";
+      setAuthError(errorId,"Browser session storage is unavailable. Check your browser settings.");return false
+    }
+  }
+  currentUser=account;
+  document.getElementById("signedInName").textContent=account.name;
+  document.getElementById("authGate").classList.add("hidden");
+  document.getElementById("appShell").classList.add("is-authenticated");
+  init();
+  return true;
+}
+function logout(){
+  let logoutError="";
+  try{sessionStorage.removeItem(AUTH_SESSION_KEY)}
+  catch(e){logoutError="Could not clear the saved sign-in session."}
+  currentUser=null;
+  clearInterval(irrigationTimer);irrigationTimer=null;
+  document.getElementById("appShell").classList.remove("is-authenticated");
+  document.getElementById("authGate").classList.remove("hidden");
+  document.getElementById("loginForm").reset();
+  document.getElementById("signupForm").reset();
+  showAuthForm("login");
+  if(logoutError)setAuthError("loginError",logoutError);
+}
+document.getElementById("loginForm").addEventListener("submit",async e=>{
+  e.preventDefault();
+  setAuthError("loginError","");
+  const submitButton=e.submitter||e.currentTarget.querySelector('button[type="submit"]');
+  submitButton.disabled=true;
+  const email=document.getElementById("loginEmail").value.trim().toLowerCase();
+  const password=document.getElementById("loginPassword").value;
+  try{
+    const account=readAccounts().find(a=>a.email===email);
+    if(!account){setAuthError("loginError","Invalid email or password. If you are new, create an account first.");return}
+    const actual=await hashPassword(password,base64ToBytes(account.salt));
+    if(!sameBytes(actual,base64ToBytes(account.passwordHash))){setAuthError("loginError","Invalid email or password.");return}
+    startSession(account);
+  }catch(error){
+    setAuthError("loginError",error.message==="Saved account data is invalid."?error.message:"Unable to sign in. Check browser storage and try again.");
+  }finally{
+    submitButton.disabled=false;
+  }
+});
+document.getElementById("signupForm").addEventListener("submit",async e=>{
+  e.preventDefault();
+  setAuthError("signupError","");
+  const name=document.getElementById("signupName").value.trim();
+  const email=document.getElementById("signupEmail").value.trim().toLowerCase();
+  const password=document.getElementById("signupPassword").value;
+  const confirmation=document.getElementById("signupConfirm").value;
+  if(password.length<8){setAuthError("signupError","Use a password with at least 8 characters.");return}
+  if(password!==confirmation){setAuthError("signupError","The passwords do not match.");return}
+  const submitButton=e.submitter||e.currentTarget.querySelector('button[type="submit"]');
+  submitButton.disabled=true;
+  try{
+    const accounts=readAccounts();
+    if(accounts.some(a=>a.email===email)){setAuthError("signupError","An account with this email already exists.");return}
+    const salt=crypto.getRandomValues(new Uint8Array(16));
+    const passwordHash=await hashPassword(password,salt);
+    const account={name,email,salt:bytesToBase64(salt),passwordHash:bytesToBase64(passwordHash)};
+    accounts.push(account);
+    saveAccounts(accounts);
+    if(startSession(account))showToast("Account created and signed in.");
+  }catch(error){
+    setAuthError("signupError",error.message.includes("Secure password hashing")?error.message:"Unable to create an account. Check browser storage and try again.");
+  }finally{
+    submitButton.disabled=false;
+  }
+});
+function restoreSession(){
+  try{
+    const email=sessionStorage.getItem(AUTH_SESSION_KEY);
+    if(!email)return;
+    const account=readAccounts().find(a=>a.email===email);
+    if(account)startSession(account,false);
+    else sessionStorage.removeItem(AUTH_SESSION_KEY);
+  }catch(error){
+    setAuthError("loginError","Unable to restore the saved sign-in. Please sign in again.");
+  }
+}
 function loadState(){
   try{
     const raw=localStorage.getItem(STORAGE_KEY);
@@ -266,7 +300,9 @@ function loadState(){
     const saved=JSON.parse(raw);
     return {...clone(defaultState),...saved,
       plants:Array.isArray(saved.plants)?saved.plants:clone(defaultState.plants),
-      events:Array.isArray(saved.events)?saved.events:[]};
+      events:Array.isArray(saved.events)?saved.events:[],
+      autoIncrease:typeof saved.autoIncrease==="boolean"?saved.autoIncrease:true,
+      moistureSamples:Array.isArray(saved.moistureSamples)?saved.moistureSamples.filter(v=>Number.isFinite(v)&&v>=0&&v<=100).slice(-12):(Number.isFinite(saved.moisture)?[saved.moisture]:[55])};
   }catch(e){return clone(defaultState)}
 }
 function saveState(){
@@ -280,8 +316,12 @@ function showToast(message){
 }
 function navigate(page){
   document.querySelectorAll(".page").forEach(p=>p.classList.toggle("active",p.id==="page-"+page));
-  document.querySelectorAll(".nav button").forEach(b=>b.classList.toggle("active",b.dataset.page===page));
-  const names={dashboard:"Dashboard",plants:"Vegetable Management",irrigation:"Irrigation Control",history:"Watering History",reports:"Reports",settings:"Settings",profile:"My Profile"};
+  document.querySelectorAll(".nav button").forEach(b=>{
+    const active=b.dataset.page===page;
+    b.classList.toggle("active",active);
+    if(active)b.setAttribute("aria-current","page");else b.removeAttribute("aria-current");
+  });
+  const names={dashboard:"Dashboard",plants:"Vegetable Management",irrigation:"Irrigation Control",history:"Watering History",reports:"Reports",settings:"Settings"};
   document.getElementById("topTitle").textContent=names[page]||"Dashboard";
   if(page==="plants")renderPlants();
   if(page==="history")renderHistory();
@@ -305,11 +345,12 @@ function evaluateAutomatic(){
   if(state.moisture<=state.dry)setPump(true,"Automatic watering simulation started: soil at or below dry threshold");
   else if(state.moisture>=state.target)setPump(false,"Automatic watering simulation stopped: target moisture reached");
 }
-function recordMoisture(){moistureSamples.push(state.moisture);if(moistureSamples.length>12)moistureSamples.shift()}
+function recordMoisture(){moistureSamples.push(state.moisture);if(moistureSamples.length>12)moistureSamples.shift();state.moistureSamples=moistureSamples.slice()}
 function render(){
   const v=state.moisture, label=soilLabel(v), cls=soilClass(v);
   ["dashMoisture","controlMoisture","reportMoisture"].forEach(id=>document.getElementById(id).textContent=v+"%");
   ["dashBar","controlBar"].forEach(id=>document.getElementById(id).style.width=v+"%");
+  ["dashMoistureBar","controlMoistureBar"].forEach(id=>document.getElementById(id).setAttribute("aria-valuenow",v));
   ["dashSoilStatus","controlSoil"].forEach(id=>{const e=document.getElementById(id);e.textContent=label;e.className="status "+cls});
   ["dashPump","controlPump"].forEach(id=>document.getElementById(id).textContent=state.pump?"ON":"OFF");
   ["dashPumpBadge","controlPumpBadge"].forEach(id=>{const e=document.getElementById(id);e.textContent=state.pump?"Watering simulated":"Standby";e.className="status "+(state.pump?"warn":"neutral")});
@@ -330,6 +371,7 @@ function render(){
   document.getElementById("autoToggle").checked=state.automatic;
   document.getElementById("dryThreshold").value=state.dry;
   document.getElementById("targetMoisture").value=state.target;
+  document.getElementById("autoIncrease").checked=state.autoIncrease;
   document.getElementById("manualStart").disabled=state.pump;
   document.getElementById("manualStop").disabled=!state.pump;
   document.getElementById("recentActivity").innerHTML=state.events.length?
@@ -442,18 +484,20 @@ document.getElementById("projectForm").addEventListener("submit",e=>{
   document.querySelector(".sidebar-note").innerHTML="<strong>Project location</strong><br>"+esc(state.projectLocation)+"<br><br><span>Prototype mode: readings and pump actions are simulated.</span>";
   addEvent("settings","Project information updated");render();showToast("Project information saved.");
 });
-document.getElementById("autoIncrease").addEventListener("change",()=>showToast("Demo behavior preference updated."));
+document.getElementById("autoIncrease").addEventListener("change",e=>{
+  state.autoIncrease=e.target.checked;saveState();showToast("Demo behavior preference updated.");
+});
 function resetAll(){
   if(!confirm("Reset all demo data, plants, settings, and history to the original defaults?"))return;
   localStorage.removeItem(STORAGE_KEY);state=clone(defaultState);moistureSamples=[state.moisture];
   document.getElementById("projectName").value=state.projectName;document.getElementById("projectLocation").value=state.projectLocation;
-  document.getElementById("autoIncrease").checked=true;closePlantForm();
+  document.getElementById("autoIncrease").checked=state.autoIncrease;closePlantForm();
   document.querySelector(".brand h1").textContent=state.projectName;
   document.querySelector(".sidebar-note").innerHTML="<strong>Project location</strong><br>"+esc(state.projectLocation)+"<br><br><span>Prototype mode: readings and pump actions are simulated.</span>";
   render();navigate("dashboard");showToast("All demo data has been reset.");
 }
 function tick(){
-  if(state.pump&&state.automatic&&document.getElementById("autoIncrease").checked){
+  if(state.pump&&state.autoIncrease){
     const before=state.moisture;
     state.moisture=Math.min(100,state.moisture+2);
     if(state.moisture!==before){evaluateAutomatic();recordMoisture();render()}
@@ -463,13 +507,15 @@ function init(){
   document.getElementById("todayText").textContent=state.projectLocation+" · "+new Date().toLocaleDateString();
   document.getElementById("projectName").value=state.projectName;
   document.getElementById("projectLocation").value=state.projectLocation;
+  document.getElementById("autoIncrease").checked=state.autoIncrease;
   document.querySelector(".brand h1").textContent=state.projectName;
   document.querySelector(".sidebar-note").innerHTML="<strong>Project location</strong><br>"+esc(state.projectLocation)+"<br><br><span>Prototype mode: readings and pump actions are simulated.</span>";
   render();
   evaluateAutomatic();render();
-  setInterval(tick,2000);
+  clearInterval(irrigationTimer);
+  irrigationTimer=setInterval(tick,2000);
 }
-init();
+restoreSession();
 </script>
 </body>
 </html>
