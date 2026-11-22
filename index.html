@@ -6,7 +6,7 @@
 <title>Automated Irrigation Management System</title>
 <style>
 :root{--green:#176b45;--green2:#218653;--pale:#e8f4eb;--bg:#f4f7f4;--ink:#203128;--muted:#68776e;--line:#dfe8e0;--white:#fff;--amber:#fff2d2;--red:#fde8e7;--shadow:0 5px 22px rgba(23,65,39,.06)}
-*{box-sizing:border-box}body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;background:var(--bg);color:var(--ink)}button,input,select,textarea{font:inherit}button{cursor:pointer;border:0;border-radius:9px;padding:10px 14px;background:var(--green);color:white;font-weight:600}button:hover{filter:brightness(.95)}button:disabled{opacity:.5;cursor:not-allowed}.btn-light{background:#e8efe9;color:#234b35}.btn-danger{background:#b83c36}.btn-outline{background:white;color:var(--green);border:1px solid #cbd9ce}.layout{display:grid;grid-template-columns:245px 1fr;min-height:100vh}.sidebar{background:#123e2b;color:white;padding:22px 15px;display:flex;flex-direction:column;gap:22px}.brand{display:flex;gap:11px;align-items:center;padding:0 8px}.brand-icon{font-size:27px}.brand h1{font-size:15px;margin:0 0 4px}.brand small{color:#c5ded0;font-size:11px}.nav{display:grid;gap:7px}.nav button{background:transparent;color:#d8e9df;text-align:left;padding:12px;border-radius:9px;font-weight:500}.nav button.active,.nav button:hover{background:#285940;color:white}.sidebar-note{margin-top:auto;font-size:12px;line-height:1.55;color:#c5ded0;background:#1b4b35;padding:13px;border-radius:10px}.main{min-width:0}.topbar{height:auto;min-height:75px;background:white;border-bottom:1px solid var(--line);padding:18px 28px;display:flex;justify-content:space-between;align-items:center;gap:14px}.topbar h2{margin:0;font-size:20px}.topbar p{margin:5px 0 0;font-size:12px;color:var(--muted)}.demo-pill{font-size:12px;background:var(--amber);color:#805a12;padding:8px 11px;border-radius:20px;font-weight:700;white-space:nowrap}.content{max-width:1400px;margin:auto;padding:26px}.page{display:none}.page.active{display:block}.page-head{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;flex-wrap:wrap;margin-bottom:20px}.page-head h3{margin:0 0 7px;font-size:24px}.page-head p{margin:0;color:var(--muted);font-size:14px}.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:15px}.grid-2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.card{background:white;border:1px solid var(--line);border-radius:14px;padding:19px;box-shadow:var(--shadow);min-width:0}.card h4{margin:0 0 13px;font-size:15px}.metric-label{color:var(--muted);font-size:13px;display:flex;justify-content:space-between;gap:8px}.metric{font-size:31px;font-weight:750;margin:12px 0 7px;letter-spacing:-.7px}.metric-foot{font-size:12px;color:var(--muted)}.metric-icon{float:right;background:var(--pale);border-radius:10px;padding:10px;font-size:20px}.bar{height:10px;background:#e9eee9;border-radius:10px;overflow:hidden;margin:14px 0 9px}.bar span{display:block;height:100%;background:var(--green2);width:0;transition:width .25s}.status{display:inline-block;padding:6px 9px;border-radius:20px;font-size:12px;font-weight:700;background:var(--pale);color:var(--green)}.status.warn{background:var(--amber);color:#805a12}.status.bad{background:var(--red);color:#a12e2a}.status.neutral{background:#edf0ed;color:#526158}.muted{color:var(--muted);font-size:13px;line-height:1.5}.controls{display:flex;gap:9px;flex-wrap:wrap;margin-top:14px}.form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.field{display:flex;flex-direction:column;gap:6px}.field label{font-size:13px;font-weight:650}.field input,.field select,.field textarea,input.search{width:100%;padding:11px;border:1px solid #ccd9ce;border-radius:8px;background:white;color:var(--ink)}.field input:focus,.field select:focus,.field textarea:focus,input.search:focus{outline:2px solid #b5dbc1;border-color:var(--green)}.table-wrap{overflow:auto}table{width:100%;border-collapse:collapse;min-width:570px}th,td{text-align:left;padding:12px 10px;border-bottom:1px solid #edf1ed;font-size:13px;vertical-align:middle}th{color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.5px;background:#fbfcfb}tbody tr:last-child td{border-bottom:0}.table-actions{display:flex;gap:6px}.table-actions button{padding:7px 9px;font-size:12px}.section-row{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin:22px 0 13px}.section-row h4{margin:0;font-size:16px}.empty{text-align:center;padding:28px;color:var(--muted);font-size:13px}.notice{border-radius:10px;padding:13px 15px;line-height:1.5;font-size:13px;margin:16px 0;background:#eef5ef;border:1px solid #d8e8da}.notice.warn{background:var(--amber);border-color:#f1dfab;color:#75530f}.notice.red{background:var(--red);border-color:#f3cecb;color:#8f2d28}.toggle-line{display:flex;align-items:center;justify-content:space-between;gap:15px;padding:13px 0;border-bottom:1px solid #edf1ed}.toggle-line:last-child{border-bottom:0}.toggle-line strong{font-size:13px}.toggle-line p{margin:4px 0 0;color:var(--muted);font-size:12px}.switch{position:relative;width:46px;height:26px;flex:none}.switch input{opacity:0;width:0;height:0}.slider{position:absolute;inset:0;border-radius:20px;background:#bdc8bf;cursor:pointer;transition:.2s}.slider:before{content:"";position:absolute;width:18px;height:18px;left:4px;top:4px;border-radius:50%;background:white;transition:.2s}.switch input:checked+.slider{background:var(--green)}.switch input:checked+.slider:before{transform:translateX(20px)}.plant-badge{font-size:20px;margin-bottom:10px}.plant-card h4{margin-bottom:6px}.plant-card p{margin:4px 0}.progress-note{display:flex;justify-content:space-between;font-size:12px;color:var(--muted)}.footer{text-align:center;color:#839087;font-size:11px;padding:25px}.toast{position:fixed;right:20px;bottom:20px;background:#173f2b;color:white;padding:13px 17px;border-radius:10px;box-shadow:var(--shadow);opacity:0;transform:translateY(8px);transition:.2s;pointer-events:none;z-index:10}.toast.show{opacity:1;transform:translateY(0)}.small{font-size:12px}.right{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.chart{display:flex;align-items:flex-end;gap:8px;height:150px;padding:15px 4px 0;border-bottom:1px solid var(--line)}.chart-col{flex:1;min-width:12px;text-align:center;height:100%;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;gap:6px}.chart-bar{width:min(34px,75%);min-height:3px;background:#3d9a67;border-radius:5px 5px 0 0}.chart-col small{font-size:10px;color:var(--muted)}.hidden{display:none!important}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:var(--bg);color:var(--ink)}button,input,select,textarea{font:inherit}button{cursor:pointer;border:0;border-radius:9px;padding:10px 14px;background:var(--green);color:white;font-weight:600}button:hover{filter:brightness(.95)}button:disabled{opacity:.5;cursor:not-allowed}.btn-light{background:#e8efe9;color:#234b35}.btn-danger{background:#b83c36}.btn-outline{background:white;color:var(--green);border:1px solid #cbd9ce}.layout{display:grid;grid-template-columns:245px 1fr;min-height:100vh}.sidebar{background:#123e2b;color:white;padding:22px 15px;display:flex;flex-direction:column;gap:22px}.brand{display:flex;gap:11px;align-items:center;padding:0 8px}.brand-icon{font-size:27px}.brand h1{font-size:15px;margin:0 0 4px}.brand small{color:#c5ded0;font-size:11px}.nav{display:grid;gap:7px}.nav button{background:transparent;color:#d8e9df;text-align:left;padding:12px;border-radius:9px;font-weight:500}.nav button.active,.nav button:hover{background:#285940;color:white}.sidebar-note{margin-top:auto;font-size:12px;line-height:1.55;color:#c5ded0;background:#1b4b35;padding:13px;border-radius:10px}.main{min-width:0}.topbar{height:auto;min-height:75px;background:white;border-bottom:1px solid var(--line);padding:18px 28px;display:flex;justify-content:space-between;align-items:center;gap:14px}.topbar h2{margin:0;font-size:20px}.topbar p{margin:5px 0 0;font-size:12px;color:var(--muted)}.demo-pill{font-size:12px;background:var(--amber);color:#805a12;padding:8px 11px;border-radius:20px;font-weight:700;white-space:nowrap}.content{max-width:1400px;margin:auto;padding:26px}.page{display:none}.page.active{display:block}.page-head{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;flex-wrap:wrap;margin-bottom:20px}.page-head h3{margin:0 0 7px;font-size:24px}.page-head p{margin:0;color:var(--muted);font-size:14px}.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:15px}.grid-2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.card{background:white;border:1px solid var(--line);border-radius:14px;padding:19px;box-shadow:var(--shadow);min-width:0}.card h4{margin:0 0 13px;font-size:15px}.metric-label{color:var(--muted);font-size:13px;display:flex;justify-content:space-between;gap:8px}.metric{font-size:31px;font-weight:750;margin:12px 0 7px;letter-spacing:-.7px}.metric-foot{font-size:12px;color:var(--muted)}.metric-icon{float:right;background:var(--pale);border-radius:10px;padding:10px;font-size:20px}.bar{height:10px;background:#e9eee9;border-radius:10px;overflow:hidden;margin:14px 0 9px}.bar span{display:block;height:100%;background:var(--green2);width:0;transition:width .25s}.status{display:inline-block;padding:6px 9px;border-radius:20px;font-size:12px;font-weight:700;background:var(--pale);color:var(--green)}.status.warn{background:var(--amber);color:#805a12}.status.bad{background:var(--red);color:#a12e2a}.status.neutral{background:#edf0ed;color:#526158}.muted{color:var(--muted);font-size:13px;line-height:1.5}.controls{display:flex;gap:9px;flex-wrap:wrap;margin-top:14px}.form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.field{display:flex;flex-direction:column;gap:6px}.field label{font-size:13px;font-weight:650}.field input,.field select,.field textarea,input.search{width:100%;padding:11px;border:1px solid #ccd9ce;border-radius:8px;background:white;color:var(--ink)}.field input:focus,.field select:focus,.field textarea:focus,input.search:focus{outline:2px solid #b5dbc1;border-color:var(--green)}.table-wrap{overflow:auto}table{width:100%;border-collapse:collapse;min-width:570px}th,td{text-align:left;padding:12px 10px;border-bottom:1px solid #edf1ed;font-size:13px;vertical-align:middle}th{color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.5px;background:#fbfcfb}tbody tr:last-child td{border-bottom:0}.table-actions{display:flex;gap:6px}.table-actions button{padding:7px 9px;font-size:12px}.section-row{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin:22px 0 13px}.section-row h4{margin:0;font-size:16px}.empty{text-align:center;padding:28px;color:var(--muted);font-size:13px}.notice{border-radius:10px;padding:13px 15px;line-height:1.5;font-size:13px;margin:16px 0;background:#eef5ef;border:1px solid #d8e8da}.notice.warn{background:var(--amber);border-color:#f1dfab;color:#75530f}.notice.red{background:var(--red);border-color:#f3cecb;color:#8f2d28}.toggle-line{display:flex;align-items:center;justify-content:space-between;gap:15px;padding:13px 0;border-bottom:1px solid #edf1ed}.toggle-line:last-child{border-bottom:0}.toggle-line strong{font-size:13px}.toggle-line p{margin:4px 0 0;color:var(--muted);font-size:12px}.switch{position:relative;width:46px;height:26px;flex:none}.switch input{opacity:0;width:0;height:0}.slider{position:absolute;inset:0;border-radius:20px;background:#bdc8bf;cursor:pointer;transition:.2s}.slider:before{content:"";position:absolute;width:18px;height:18px;left:4px;top:4px;border-radius:50%;background:white;transition:.2s}.switch input:checked+.slider{background:var(--green)}.switch input:checked+.slider:before{transform:translateX(20px)}.plant-badge{font-size:20px;margin-bottom:10px}.plant-card h4{margin-bottom:6px}.plant-card p{margin:4px 0}.progress-note{display:flex;justify-content:space-between;font-size:12px;color:var(--muted)}.footer{text-align:center;color:#839087;font-size:11px;padding:25px}.toast{position:fixed;right:20px;bottom:20px;background:#173f2b;color:white;padding:13px 17px;border-radius:10px;box-shadow:var(--shadow);opacity:0;transform:translateY(8px);transition:.2s;pointer-events:none;z-index:10}.toast.show{opacity:1;transform:translateY(0)}.small{font-size:12px}.right{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.chart{display:flex;align-items:flex-end;gap:8px;height:150px;padding:15px 4px 0;border-bottom:1px solid var(--line)}.chart-col{flex:1;min-width:12px;text-align:center;height:100%;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;gap:6px}.chart-bar{width:min(34px,75%);min-height:3px;background:#3d9a67;border-radius:5px 5px 0 0}.chart-col small{font-size:10px;color:var(--muted)}.hidden{display:none!important}
 #authGate{min-height:100vh;display:grid;place-items:center;padding:24px;background:linear-gradient(135deg,#e8f4eb,#f4f7f4)}
 .auth-card{width:min(100%,440px);background:white;border:1px solid var(--line);border-radius:16px;padding:28px;box-shadow:var(--shadow)}
 .auth-brand{display:flex;align-items:center;gap:12px;margin-bottom:22px}.auth-brand-icon{font-size:32px}.auth-brand h1{font-size:19px;margin:0 0 4px}.auth-brand p{margin:0;color:var(--muted);font-size:13px}
@@ -24,14 +24,791 @@ button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid 
 .password-meter{width:100%;height:8px;margin:6px 0 2px;accent-color:var(--green)}.password-strength{font-size:12px;color:var(--muted)}
 .skip-link{position:absolute;left:12px;top:-50px;background:white;color:var(--green);padding:10px 12px;border-radius:8px;z-index:20}.skip-link:focus{top:12px}
 .profile-img{display:block;width:100%;max-width:900px;height:auto;margin:0 auto;border:1px solid var(--line);border-radius:8px}
+/* Professional GreenFlow button system */
+button{
+  position:relative;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  min-height:40px;
+  border:1px solid #176b45;
+  border-radius:7px;
+  padding:9px 14px;
+  background:#176b45;
+  color:#fff;
+  font-size:13px;
+  font-weight:700;
+  letter-spacing:.01em;
+  box-shadow:0 2px 5px rgba(18,62,43,.12),inset 0 1px rgba(255,255,255,.10);
+  overflow:hidden;
+  transition:background .18s ease,border-color .18s ease,color .18s ease,box-shadow .18s ease,transform .12s ease;
+  -webkit-tap-highlight-color:transparent
+}
+button:hover:not(:disabled){
+  background:#125838;
+  border-color:#125838;
+  box-shadow:0 5px 12px rgba(18,62,43,.18),inset 0 1px rgba(255,255,255,.10);
+  transform:translateY(-1px);
+  filter:none
+}
+button:active:not(:disabled){
+  background:#0f4b2f;
+  border-color:#0f4b2f;
+  box-shadow:inset 0 2px 4px rgba(0,0,0,.18);
+  transform:translateY(0)
+}
+button:focus-visible{
+  outline:3px solid rgba(76,154,106,.28);
+  outline-offset:3px
+}
+button:disabled{
+  opacity:.48;
+  box-shadow:none;
+  filter:none
+}
+.btn-light{
+  background:#eef3ef;
+  color:#2d503d;
+  border-color:#d6dfd8;
+  box-shadow:0 1px 3px rgba(32,49,40,.06)
+}
+.btn-light:hover:not(:disabled){
+  background:#e4ece6;
+  color:#1d4430;
+  border-color:#bccbbf;
+  box-shadow:0 4px 10px rgba(32,49,40,.10)
+}
+.btn-outline{
+  background:#fff;
+  color:#176b45;
+  border-color:#b4c7ba;
+  box-shadow:0 1px 3px rgba(32,49,40,.05)
+}
+.btn-outline:hover:not(:disabled){
+  background:#f3f8f4;
+  color:#125838;
+  border-color:#799e86;
+  box-shadow:0 4px 10px rgba(32,49,40,.08)
+}
+.btn-danger{
+  background:#fff;
+  color:#a73530;
+  border-color:#dfaaa7;
+  box-shadow:0 1px 3px rgba(125,45,40,.05)
+}
+.btn-danger:hover:not(:disabled){
+  background:#b83c36;
+  color:#fff;
+  border-color:#b83c36;
+  box-shadow:0 5px 12px rgba(184,60,54,.16)
+}
+.nav button{
+  width:100%;
+  min-height:44px;
+  border-color:transparent;
+  border-radius:7px;
+  background:transparent;
+  color:#d8e9df;
+  box-shadow:none;
+  font-weight:600
+}
+.nav button:hover:not(:disabled){
+  background:rgba(255,255,255,.075);
+  border-color:rgba(255,255,255,.06);
+  color:#fff;
+  box-shadow:none;
+  transform:none
+}
+.nav button.active{
+  background:#285940;
+  border-color:rgba(255,255,255,.09);
+  color:#fff;
+  box-shadow:inset 3px 0 #84c6a1
+}
+.password-toggle{
+  flex:none;
+  min-width:68px;
+  background:#f3f7f4;
+  color:#315744;
+  border-color:#cdd9d1;
+  box-shadow:none
+}
+.password-toggle:hover:not(:disabled){
+  background:#e7efe9;
+  color:#176b45;
+  border-color:#aabdaf
+}
+.auth-switch button{
+  min-height:auto;
+  display:inline;
+  width:auto;
+  padding:0;
+  border:0;
+  border-radius:0;
+  background:none;
+  color:#176b45;
+  box-shadow:none;
+  font-size:inherit;
+  font-weight:700;
+  text-decoration:underline;
+  text-underline-offset:3px
+}
+.auth-switch button:hover:not(:disabled){
+  background:none;
+  color:#0f5736;
+  box-shadow:none;
+  transform:none
+}
+.account-panel button{
+  min-height:32px;
+  border-radius:6px;
+  padding:6px 9px
+}
+.table-actions button{
+  min-height:32px;
+  padding:7px 9px
+}
+.page-head>.page-actions,
+.right{
+  margin-left:auto
+}
+.page-head>button:only-of-type{
+  margin-left:auto
+}
+.controls{
+  align-items:center;
+  justify-content:flex-end;
+  gap:8px
+}
+.card>.controls{
+  margin-top:16px;
+  padding-top:14px;
+  border-top:1px solid #edf1ed
+}
+.right{
+  display:flex;
+  align-items:center;
+  justify-content:flex-end
+}
+.auth-card .controls{
+  display:grid;
+  justify-content:stretch
+}
+.auth-card .controls button{
+  width:100%
+}
+.table-actions{
+  justify-content:flex-end
+}
+.section-row .search{
+  max-width:270px
+}
+.nav button{
+  position:relative;
+  gap:10px
+}
+.nav button::after{
+  content:"";
+  position:absolute;
+  right:12px;
+  width:5px;
+  height:5px;
+  border-radius:50%;
+  background:transparent;
+  transition:background .16s ease,transform .16s ease
+}
+.nav button.active::after{
+  background:#a8dab7;
+  transform:scale(1.15)
+}
+.nav button:not(.active):hover::after{
+  background:#86b899
+}
+button[type="submit"]{
+  min-width:150px
+}
+button[aria-pressed="true"],
+.nav button.active,
+.switch input:checked+.slider{
+  border-color:#176b45
+}
+.controls>button:only-child{
+  min-width:170px
+}
+.card>.controls{
+  border-top:1px solid #edf1ed
+}
+.page-head{
+  align-items:center
+}
+.btn-danger:active:not(:disabled){
+  background:#9d302b;
+  border-color:#9d302b
+}
+.password-row{
+  align-items:stretch
+}
+.password-toggle{
+  height:auto
+}
+.account-panel button.btn-light{
+  background:#edf3ef;
+  color:#234b35;
+  border-color:rgba(255,255,255,.18)
+}
+.account-panel button.btn-light:hover:not(:disabled){
+  background:#fff;
+  color:#176b45;
+  border-color:#fff
+}
+.auth-card button[type="submit"]{
+  min-height:44px;
+  font-size:14px
+}
+.table-actions button{
+  min-width:58px
+}
+@media(max-width:700px){
+  .nav{
+    scroll-snap-type:x proximity;
+    scrollbar-width:none
+  }
+  .nav::-webkit-scrollbar{
+    display:none
+  }
+  .nav button{
+    scroll-snap-align:start
+  }
+  .page-head>div{
+    width:100%
+  }
+  .controls{
+    width:100%
+  }
+  button[type="submit"],
+  .controls>button:only-child{
+    min-width:0
+  }
+}
+.password-row .password-toggle{
+  align-self:stretch
+}
+.account-panel{
+  align-items:center
+}
+.account-panel>button{
+  flex:none
+}
+.nav{
+  align-content:start
+}
+@media(max-width:700px){
+  .page-head>button:only-of-type,
+  .page-head>.right,
+  .right{
+    width:100%;
+    margin-left:0
+  }
+  .right{
+    display:grid;
+    grid-template-columns:1fr 1fr
+  }
+  .controls{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(150px,1fr))
+  }
+  .controls>button,
+  .right>button{
+    width:100%
+  }
+  .table-actions{
+    min-width:max-content
+  }
+  .section-row .search{
+    max-width:none;
+    width:100%
+  }
+  .account-panel{
+    width:100%
+  }
+}
+/* Clear, consistent typography throughout the interface */
+body{
+  font-family:Arial,sans-serif;
+  font-size:14px;
+  line-height:1.55;
+  letter-spacing:.005em;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility
+}
+h1,h2,h3,h4,p{
+  overflow-wrap:anywhere
+}
+h1,h2,h3,h4{
+  color:var(--ink);
+  line-height:1.25;
+  letter-spacing:-.025em
+}
+.brand h1,
+.auth-brand h1{
+  color:inherit;
+  letter-spacing:-.02em
+}
+.topbar h2{
+  font-size:clamp(19px,2vw,23px);
+  font-weight:750
+}
+.page-head h3{
+  font-size:clamp(22px,2.4vw,27px);
+  font-weight:750;
+  letter-spacing:-.035em
+}
+.card h4,
+.section-row h4{
+  font-size:15px;
+  font-weight:700;
+  letter-spacing:-.015em
+}
+.page-head p,
+.muted,
+.auth-card>p{
+  line-height:1.65
+}
+.metric-label,
+.metric-foot,
+.field label,
+.toggle-line strong{
+  letter-spacing:.01em
+}
+.field label{
+  color:#34473b;
+  font-size:13px;
+  font-weight:650;
+  line-height:1.4
+}
+.field input,
+.field select,
+.field textarea,
+input.search{
+  font-size:14px;
+  line-height:1.45
+}
+input::placeholder,
+textarea::placeholder{
+  color:#87948b;
+  opacity:1
+}
+th{
+  font-size:10px;
+  font-weight:750;
+  letter-spacing:.075em
+}
+td{
+  line-height:1.5
+}
+.status,
+.demo-pill{
+  font-size:11px;
+  letter-spacing:.035em
+}
+.sidebar-note,
+.account-panel{
+  line-height:1.6
+}
+.small,
+.chart-col small{
+  line-height:1.45
+}
+.auth-card h2{
+  font-size:24px;
+  font-weight:750;
+  letter-spacing:-.035em
+}
+.auth-error{
+  line-height:1.45
+}
+button{
+  line-height:1.25;
+  letter-spacing:.015em
+}
+.nav button{
+  font-size:13px;
+  letter-spacing:.005em
+}
+.metric{
+  font-variant-numeric:tabular-nums;
+  line-height:1.1
+}
+@media(max-width:700px){
+  body{
+    font-size:14px
+  }
+  .page-head h3{
+    font-size:22px
+  }
+  .topbar h2{
+    font-size:19px
+  }
+  .auth-card{
+    padding:23px
+  }
+}
+:root{
+  --muted:#59695f
+}
+body{
+  font-size:14.5px;
+  line-height:1.6
+}
+.topbar p,
+.metric-foot,
+.toggle-line p,
+.sidebar-note,
+.auth-switch,
+.password-strength{
+  font-size:13px
+}
+.muted,
+.page-head p,
+.notice,
+.empty{
+  font-size:14px
+}
+.small{
+  font-size:12.5px;
+  color:#5f6e64
+}
+.card h4,
+.section-row h4{
+  padding-left:9px;
+  border-left:3px solid #8fbea0
+}
+.plant-card h4{
+  padding-left:0;
+  border-left:0
+}
+.metric-label{
+  font-weight:600
+}
+.metric,
+td,
+.toggle-line>strong{
+  font-variant-numeric:tabular-nums
+}
+.notice,
+.sidebar-note,
+.toggle-line p,
+.muted{
+  text-wrap:pretty
+}
+.metric-label{
+  color:#53645a;
+  font-size:11px;
+  font-weight:750;
+  letter-spacing:.075em;
+  text-transform:uppercase
+}
+.metric{
+  color:#176b45;
+  font-size:clamp(32px,3vw,37px);
+  font-weight:800;
+  letter-spacing:-1.1px
+}
+.metric-foot{
+  color:#65756b;
+  font-size:13px
+}
+.card h4,
+.section-row h4{
+  color:#263b2e
+}
+.toggle-line strong,
+td strong,
+#recentActivity strong{
+  color:#2d4435;
+  font-weight:700
+}
+.status{
+  font-weight:750;
+  letter-spacing:.025em
+}
+th{
+  color:#53645a
+}
+.topbar p{
+  color:#5f6e64;
+  font-size:13px
+}
+.auth-brand p{
+  letter-spacing:.01em
+}
+.password-strength{
+  line-height:1.5
+}
+.chart-col small{
+  font-variant-numeric:tabular-nums;
+  font-weight:650
+}
+@media(max-width:700px){
+  body{
+    font-size:14px
+  }
+  .muted,
+  .page-head p,
+  .notice,
+  .empty{
+    font-size:13.5px
+  }
+  .metric{
+    font-size:32px
+  }
+}
+.icon,
+.brand-icon svg,
+.auth-brand-icon svg,
+.metric-icon svg,
+.plant-badge svg{
+  display:block;
+  width:20px;
+  height:20px;
+  fill:none;
+  stroke:currentColor;
+  stroke-width:1.8;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  flex:none
+}
+.brand-icon svg{
+  width:29px;
+  height:29px
+}
+.auth-brand-icon svg{
+  width:34px;
+  height:34px
+}
+.nav button{
+  justify-content:flex-start;
+  gap:11px
+}
+.nav button .icon{
+  width:18px;
+  height:18px;
+  opacity:.9
+}
+.nav button.active .icon{
+  opacity:1
+}
+.metric-icon{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  float:none;
+  width:42px;
+  height:42px;
+  padding:0;
+  color:#176b45
+}
+.metric-icon svg{
+  width:22px;
+  height:22px
+}
+.plant-badge{
+  display:grid;
+  place-items:center;
+  width:40px;
+  height:40px;
+  border-radius:11px;
+  background:#e8f4eb;
+  color:#176b45
+}
+.plant-badge svg{
+  width:23px;
+  height:23px
+}
+.demo-pill{
+  display:inline-flex;
+  align-items:center;
+  gap:8px
+}
+.demo-dot{
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  background:#b78218;
+  box-shadow:0 0 0 3px rgba(183,130,24,.14)
+}
+body{
+  font-size:15px;
+  line-height:1.65
+}
+button,
+input,
+select,
+textarea{
+  font-size:14px
+}
+.nav button{
+  font-size:14px
+}
+.brand small,
+.footer,
+.chart-col small,
+.small,
+.progress-note,
+.table-actions button{
+  font-size:13px
+}
+.brand small,
+.footer,
+.chart-col small,
+.progress-note,
+input::placeholder,
+textarea::placeholder{
+  color:#5f6e64
+}
+.status,
+.demo-pill{
+  font-size:13px
+}
+.metric-label{
+  font-size:12px
+}
+.metric-foot,
+.toggle-line p,
+.topbar p,
+.auth-card>p,
+.auth-brand p,
+.field label,
+.auth-switch,
+.password-strength{
+  font-size:14px
+}
+.muted,
+.page-head p,
+.notice,
+.empty{
+  font-size:15px
+}
+th{
+  font-size:12px
+}
+td{
+  font-size:14px;
+  line-height:1.6
+}
+.account-panel{
+  font-size:13px
+}
+@media(max-width:700px){
+  body{
+    font-size:14.5px
+  }
+  .muted,
+  .page-head p,
+  .notice,
+  .empty{
+    font-size:14px
+  }
+}
+body{
+  background-color:#f1f6f1;
+  background-image:
+    radial-gradient(ellipse at 88% 2%,rgba(180,216,190,.34),transparent 34rem),
+    linear-gradient(145deg,#f8faf8 0%,#edf4ee 55%,#f3f7f3 100%)
+}
+.layout{
+  background:transparent
+}
+.sidebar{
+  background:
+    radial-gradient(ellipse at 0% 0%,rgba(89,157,110,.20),transparent 19rem),
+    linear-gradient(160deg,#174a33 0%,#123e2b 52%,#0d3323 100%)
+}
+.main{
+  background:
+    radial-gradient(ellipse at 94% 6%,rgba(191,224,199,.28),transparent 30rem),
+    linear-gradient(180deg,rgba(248,251,248,.92),rgba(239,246,240,.97))
+}
+.topbar{
+  background:rgba(255,255,255,.91);
+  border-bottom-color:rgba(205,220,208,.85);
+  backdrop-filter:blur(12px)
+}
+.card,
+.auth-card{
+  background:rgba(255,255,255,.96);
+  border-color:#dbe7dc;
+  box-shadow:0 8px 26px rgba(24,73,45,.075)
+}
+#authGate{
+  background:
+    radial-gradient(ellipse at 18% 18%,rgba(169,211,180,.50),transparent 28rem),
+    radial-gradient(ellipse at 88% 82%,rgba(205,230,210,.52),transparent 31rem),
+    linear-gradient(135deg,#e8f4eb 0%,#f5f8f4 52%,#e6f0e8 100%)
+}
+.metric-icon,
+.plant-badge{
+  background:linear-gradient(145deg,#eaf5ec,#dceee0)
+}
+.bar{
+  background:#e4ede5
+}
+.brand small,
+.footer,
+.chart-col small,
+.small,
+.progress-note,
+.table-actions button{
+  font-size:12px
+}
+.brand small,
+.footer,
+.chart-col small,
+.progress-note{
+  color:#5f6e64
+}
+.status{
+  font-size:12px
+}
+.demo-pill{
+  font-size:12px;
+  letter-spacing:.045em
+}
+th{
+  font-size:11px;
+  letter-spacing:.065em
+}
+.progress-note{
+  line-height:1.45
+}
+.chart-col small{
+  font-weight:650
+}
+.chart-value{
+  color:var(--green);
+  font-size:10px;
+  font-weight:700;
+}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important}}
+@media(max-width:700px){
+  .layout{grid-template-columns:minmax(0,1fr)}
+  .sidebar,.nav{min-width:0;max-width:100%}
+  .nav button{width:auto;flex:0 0 auto}
+  .topbar{flex-wrap:wrap}
+  .topbar>div:first-child{min-width:0}
+  .content .grid[style*="repeat(2"]{grid-template-columns:1fr!important}
+  .chart{gap:4px}
+  .chart-col{min-width:0}
+  .chart-col small{font-size:9px}
+}
 </style>
 </head>
 <body>
 <a class="skip-link" href="#mainContent">Skip to garden system</a>
 <section id="authGate" aria-label="Account access">
   <div class="auth-card">
-    <div class="auth-brand"><span class="auth-brand-icon">🌱</span><div><h1>GreenFlow Irrigation</h1><p>Brgy. Union, Mahaplag Elementary School</p></div></div>
+    <div class="auth-brand"><span class="auth-brand-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 20v-8m0 4c-4 0-7-2.5-7-7 4.5 0 7 2.5 7 7Zm0-3c0-4 2.5-7 7-7 0 4.5-2.5 7-7 7Z"/></svg></span><div><h1>GreenFlow Irrigation</h1><p>Brgy. Union, Mahaplag Elementary School</p></div></div>
     <form id="loginForm">
       <h2>Sign in</h2>
       <p>Sign in to manage the school garden irrigation system.</p>
@@ -57,16 +834,17 @@ button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid 
 </section>
 <div class="layout" id="appShell">
   <aside class="sidebar">
-    <div class="brand"><div class="brand-icon">🌱</div><div><h1>GreenFlow Irrigation</h1><small>School Garden System</small></div></div>
+    <div class="brand"><div class="brand-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 20v-8m0 4c-4 0-7-2.5-7-7 4.5 0 7 2.5 7 7Zm0-3c0-4 2.5-7 7-7 0 4.5-2.5 7-7 7Z"/></svg></div><div><h1>GreenFlow Irrigation</h1><small>School Garden System</small></div></div>
     <div class="account-panel"><div>Signed in as<strong id="signedInName"></strong></div><button class="btn-light" type="button" onclick="logout()">Log out</button></div>
     <nav class="nav" aria-label="Main navigation">
-      <button class="active" data-page="dashboard" aria-current="page">▦ &nbsp; Dashboard</button>
-      <button data-page="plants">🌿 &nbsp; Vegetable Management</button>
-      <button data-page="irrigation">💧 &nbsp; Irrigation Control</button>
-      <button data-page="history">◷ &nbsp; Watering History</button>
-      <button data-page="reports">▤ &nbsp; Reports</button>
-      <button data-page="settings">⚙ &nbsp; Settings</button>
-      <button data-page="about">👤 &nbsp; My Profile</button>
+      <button class="active" data-page="dashboard" aria-current="page"><svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="7" height="7" rx="1"/><rect x="13.5" y="3.5" width="7" height="7" rx="1"/><rect x="3.5" y="13.5" width="7" height="7" rx="1"/><rect x="13.5" y="13.5" width="7" height="7" rx="1"/></svg><span>Dashboard</span></button>
+      <button data-page="plants"><svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M20 4c-8 0-13 3.5-13 9a5 5 0 0 0 5 5c5.5 0 8-6 8-14Z"/><path d="M4 21c3-5 6-8 11-11"/></svg><span>Vegetable Management</span></button>
+      <button data-page="irrigation"><svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M12 3s7 7.3 7 12a7 7 0 0 1-14 0c0-4.7 7-12 7-12Z"/><path d="M9 16a3 3 0 0 0 3 3"/></svg><span>Irrigation Control</span></button>
+      <button data-page="history"><svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Watering History</span></button>
+      <button data-page="reports"><svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M4 19.5h16"/><rect x="6" y="11" width="3" height="6" rx=".5"/><rect x="11" y="7" width="3" height="10" rx=".5"/><rect x="16" y="4" width="3" height="13" rx=".5"/></svg><span>Reports</span></button>
+      <button data-page="settings"><svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="m19.4 15 .1.1 1.2 1-.9 1.6-1.5-.5a8 8 0 0 1-1.7 1l-.2 1.6h-1.9l-.3-1.6a8 8 0 0 1-1.8-.1l-.9 1.3-1.7-.8.4-1.6a8 8 0 0 1-1.2-1.4l-1.6.1-.6-1.8 1.4-.8a8 8 0 0 1 0-1.9l-1.4-.9.7-1.7 1.6.3a8 8 0 0 1 1.3-1.3l-.2-1.6 1.8-.7.8 1.4a8 8 0 0 1 1.9 0l.9-1.4 1.7.8-.3 1.6a8 8 0 0 1 1.3 1.3l1.6-.2.7 1.8-1.4.8a8 8 0 0 1 .1 1.9l1.4.8-.8 1.7-1.6-.4a8 8 0 0 1-1.3 1.3"/></svg><span>Settings</span></button>
+      <button id="developerNav" data-page="developer" class="hidden"><svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.5"/><path d="M5 20a7 7 0 0 1 14 0"/><path d="M17.5 3.5v4m-2-2h4"/></svg><span>Developer Accounts</span></button>
+      <button data-page="about"><svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.5"/><path d="M5 20a7 7 0 0 1 14 0"/></svg><span>My Profile</span></button>
     </nav>
     <div class="sidebar-note"><strong>Project location</strong><br>Brgy. Union, Mahaplag Elementary School<br><br><span>Prototype mode: readings and pump actions are simulated.</span></div>
   </aside>
@@ -74,18 +852,19 @@ button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid 
   <div class="main">
     <header class="topbar">
       <div><h2 id="topTitle">Dashboard</h2><p id="todayText">School Garden · Automated Irrigation</p></div>
-      <div class="demo-pill">● SIMULATION MODE</div>
+      <div class="demo-pill"><span class="demo-dot" aria-hidden="true"></span>SIMULATION MODE</div>
     </header>
 
     <main class="content" id="mainContent">
       <section class="page active" id="page-dashboard">
         <div class="page-head"><div><h3>Garden overview</h3><p>Check simulated soil moisture, pump status, and garden activity.</p></div><button class="btn-outline" onclick="simulateDry()">Test dry soil</button></div>
         <div class="notice warn"><strong>Prototype notice:</strong> This is a software simulation. It does not read a real sensor or operate a real water pump.</div>
+        <div class="notice" id="dashboardRecommendation" role="status">Moisture is between your configured thresholds.</div>
         <div class="grid">
-          <div class="card"><div class="metric-label">Soil moisture <span class="metric-icon">💧</span></div><div class="metric" id="dashMoisture">55%</div><div class="bar" id="dashMoistureBar" role="progressbar" aria-label="Simulated soil moisture" aria-valuemin="0" aria-valuemax="100" aria-valuenow="55"><span id="dashBar"></span></div><span class="status" id="dashSoilStatus">Moderate</span><p class="metric-foot">Simulated reading</p></div>
-          <div class="card"><div class="metric-label">Pump status <span class="metric-icon">🚿</span></div><div class="metric" id="dashPump">OFF</div><span class="status neutral" id="dashPumpBadge">Standby</span><p class="metric-foot" id="dashPumpNote">No watering currently simulated</p></div>
-          <div class="card"><div class="metric-label">Vegetable types <span class="metric-icon">🌿</span></div><div class="metric" id="dashPlantCount">3</div><p class="metric-foot">Managed in this browser</p></div>
-          <div class="card"><div class="metric-label">Watering starts <span class="metric-icon">📋</span></div><div class="metric" id="dashEvents">0</div><p class="metric-foot">Saved event history</p></div>
+          <div class="card"><div class="metric-label">Soil moisture <span class="metric-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3s7 7.3 7 12a7 7 0 0 1-14 0c0-4.7 7-12 7-12Z"/><path d="M9 16a3 3 0 0 0 3 3"/></svg></span></div><div class="metric" id="dashMoisture">55%</div><div class="bar" id="dashMoistureBar" role="progressbar" aria-label="Simulated soil moisture" aria-valuemin="0" aria-valuemax="100" aria-valuenow="55"><span id="dashBar"></span></div><span class="status" id="dashSoilStatus">Moderate</span><p class="metric-foot">Simulated reading</p></div>
+          <div class="card"><div class="metric-label">Pump status <span class="metric-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 20h16M6 20V9h12v11M9 9V5h6v4M9 13h6"/><path d="M12 13v4m-2-2 2 2 2-2"/></svg></span></div><div class="metric" id="dashPump">OFF</div><span class="status neutral" id="dashPumpBadge">Standby</span><p class="metric-foot" id="dashPumpNote">No watering currently simulated</p></div>
+          <div class="card"><div class="metric-label">Vegetable types <span class="metric-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 4c-8 0-13 3.5-13 9a5 5 0 0 0 5 5c5.5 0 8-6 8-14Z"/><path d="M4 21c3-5 6-8 11-11"/></svg></span></div><div class="metric" id="dashPlantCount">3</div><p class="metric-foot">Managed in this browser</p></div>
+          <div class="card"><div class="metric-label">Watering starts <span class="metric-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 3v3m10-3v3M4 9h16M5 5h14a1 1 0 0 1 1 1v13H4V6a1 1 0 0 1 1-1Z"/><path d="M8 13h3m-3 3h6"/></svg></span></div><div class="metric" id="dashEvents">0</div><p class="metric-foot">Saved event history</p></div>
         </div>
         <div class="grid-2" style="margin-top:16px">
           <div class="card"><h4>Current irrigation settings</h4><div class="toggle-line"><div><strong>Automatic mode</strong><p>Automatically simulates watering based on moisture thresholds.</p></div><span class="status" id="dashAuto">ON</span></div><div class="toggle-line"><div><strong>Dry threshold</strong><p>Watering starts at or below this level.</p></div><strong id="dashDry">35%</strong></div><div class="toggle-line"><div><strong>Target moisture</strong><p>Watering stops at or above this level.</p></div><strong id="dashTarget">60%</strong></div><div class="controls"><button onclick="navigate('irrigation')">Open irrigation controls</button></div></div>
@@ -94,8 +873,8 @@ button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid 
       </section>
 
       <section class="page" id="page-plants">
-        <div class="page-head"><div><h3>Vegetable management</h3><p>Add, edit, and remove vegetable types and garden bed locations.</p></div><button onclick="openPlantForm()">＋ Add vegetable</button></div>
-        <div class="card hidden" id="plantFormCard"><h4 id="plantFormTitle">Add a vegetable</h4><form id="plantForm"><input id="plantId" type="hidden"><div class="form-grid"><div class="field"><label for="plantName">Vegetable name *</label><input id="plantName" required maxlength="60" placeholder="e.g., Pechay"></div><div class="field"><label for="plantBed">Garden bed / location *</label><input id="plantBed" required maxlength="80" placeholder="e.g., Garden Bed 1"></div><div class="field"><label for="plantDate">Planting date</label><input id="plantDate" type="date"></div><div class="field"><label for="plantNotes">Notes</label><input id="plantNotes" maxlength="160" placeholder="e.g., Water in the morning"></div></div><div class="controls"><button type="submit">Save vegetable</button><button type="button" class="btn-light" onclick="closePlantForm()">Cancel</button></div></form></div>
+        <div class="page-head"><div><h3>Vegetable management</h3><p>Add, edit, and remove vegetable types and garden bed locations.</p></div><button onclick="openPlantForm()"><svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg><span>Add vegetable</span></button></div>
+        <div class="card hidden" id="plantFormCard"><h4 id="plantFormTitle">Add a vegetable</h4><form id="plantForm"><input id="plantId" type="hidden"><div class="form-grid"><div class="field"><label for="plantName">Vegetable name *</label><input id="plantName" required maxlength="60" placeholder="e.g., Pechay"></div><div class="field"><label for="plantBed">Garden bed / location *</label><input id="plantBed" required maxlength="80" placeholder="e.g., Garden Bed 1"></div><div class="field"><label for="plantDate">Planting date</label><input id="plantDate" type="date"></div><div class="field"><label for="plantNotes">Notes</label><input id="plantNotes" maxlength="160" placeholder="e.g., Water in the morning"></div></div><div class="controls"><button type="button" class="btn-light" onclick="closePlantForm()">Cancel</button><button type="submit">Save vegetable</button></div></form></div>
         <div class="section-row"><h4>Garden plants</h4><input class="search" id="plantSearch" style="max-width:270px" placeholder="Search vegetables..." oninput="renderPlants()"></div>
         <div id="plantCards" class="grid"></div>
         <div class="card" style="margin-top:16px"><h4>Plant records</h4><div class="table-wrap"><table><thead><tr><th>Vegetable</th><th>Location</th><th>Planting date</th><th>Notes</th><th>Actions</th></tr></thead><tbody id="plantRows"></tbody></table></div></div>
@@ -104,10 +883,10 @@ button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid 
       <section class="page" id="page-irrigation">
         <div class="page-head"><div><h3>Irrigation control</h3><p>Adjust the demonstration settings and test automatic watering logic.</p></div><span class="status warn">Simulation only</span></div>
         <div class="grid-2">
-          <div class="card"><h4>Moisture simulator</h4><div class="metric" id="controlMoisture">55%</div><div class="bar" id="controlMoistureBar" role="progressbar" aria-label="Simulated soil moisture" aria-valuemin="0" aria-valuemax="100" aria-valuenow="55"><span id="controlBar"></span></div><span id="controlSoil" class="status">Moderate</span><p class="muted">Change the simulated moisture value to test how the system responds. This is not a real sensor reading.</p><div class="field"><label for="moistureSlider">Set simulated soil moisture</label><input id="moistureSlider" type="range" min="0" max="100" value="55" oninput="setMoistureFromSlider(this.value)"></div><div class="progress-note"><span>0% · Dry</span><span>100% · Very moist</span></div><div class="controls"><button class="btn-light" onclick="changeMoisture(-10)">− Make drier</button><button class="btn-light" onclick="changeMoisture(10)">＋ Add moisture</button><button class="btn-outline" onclick="randomMoisture()">Random test</button></div></div>
+          <div class="card"><h4>Moisture simulator</h4><div class="metric" id="controlMoisture">55%</div><div class="bar" id="controlMoistureBar" role="progressbar" aria-label="Simulated soil moisture" aria-valuemin="0" aria-valuemax="100" aria-valuenow="55"><span id="controlBar"></span></div><span id="controlSoil" class="status">Moderate</span><p class="muted">Change the simulated moisture value to test how the system responds. This is not a real sensor reading.</p><div class="field"><label for="moistureSlider">Set simulated soil moisture</label><input id="moistureSlider" type="range" min="0" max="100" value="55" oninput="setMoistureFromSlider(this.value)"><output id="moistureValue" for="moistureSlider" aria-live="polite">55%</output></div><div class="progress-note"><span>0% · Dry</span><span>100% · Very moist</span></div><div class="controls"><button class="btn-light" onclick="changeMoisture(-10)"><svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h14"/></svg><span>Make drier</span></button><button class="btn-light" onclick="changeMoisture(10)"><svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg><span>Add moisture</span></button><button class="btn-outline" onclick="randomMoisture()">Random test</button></div></div>
           <div class="card"><h4>Pump simulation</h4><div class="metric" id="controlPump">OFF</div><span id="controlPumpBadge" class="status neutral">Standby</span><p id="controlPumpText" class="muted">Pump simulation is off.</p><div class="controls"><button id="manualStart" onclick="manualPump(true)">Start pump simulation</button><button id="manualStop" class="btn-light" onclick="manualPump(false)">Stop pump simulation</button></div><div class="notice warn">Manual control only changes the on-screen simulation. It cannot start or stop a physical pump.</div></div>
         </div>
-        <div class="card" style="margin-top:16px"><h4>Automatic control</h4><div class="toggle-line"><div><strong>Automatic mode</strong><p>When ON, moisture thresholds determine the simulated pump state.</p></div><label class="switch"><input id="autoToggle" type="checkbox" checked onchange="setAutomatic(this.checked)"><span class="slider"></span></label></div><div class="form-grid" style="margin-top:16px"><div class="field"><label for="dryThreshold">Dry threshold (%)</label><input id="dryThreshold" type="number" min="0" max="95" value="35"></div><div class="field"><label for="targetMoisture">Target moisture (%)</label><input id="targetMoisture" type="number" min="5" max="100" value="60"></div></div><div class="controls"><button onclick="saveIrrigationSettings()">Save irrigation settings</button><button class="btn-outline" onclick="resetMoisture()">Reset moisture to 55%</button></div><p class="muted">The target must be higher than the dry threshold. These values are demonstration settings, not agricultural advice for every crop.</p></div>
+        <div class="card" style="margin-top:16px"><h4>Automatic control</h4><div class="toggle-line"><div><strong>Automatic mode</strong><p>When ON, moisture thresholds determine the simulated pump state.</p></div><label class="switch"><input id="autoToggle" type="checkbox" checked onchange="setAutomatic(this.checked)"><span class="slider"></span></label></div><div class="form-grid" style="margin-top:16px"><div class="field"><label for="dryThreshold">Dry threshold (%)</label><input id="dryThreshold" type="number" min="0" max="95" value="35"></div><div class="field"><label for="targetMoisture">Target moisture (%)</label><input id="targetMoisture" type="number" min="5" max="100" value="60"></div></div><div class="controls"><button class="btn-outline" onclick="resetMoisture()">Reset moisture to 55%</button><button onclick="saveIrrigationSettings()">Save irrigation settings</button></div><p class="muted">The target must be higher than the dry threshold. These values are demonstration settings, not agricultural advice for every crop.</p></div>
       </section>
 
       <section class="page" id="page-history">
@@ -125,8 +904,8 @@ button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid 
           <div class="card"><div class="metric-label">Automatic mode</div><div class="metric" id="reportAuto">ON</div><p class="metric-foot">Current setting</p></div>
         </div>
         <div class="grid-2" style="margin-top:16px">
-          <div class="card"><h4>Recent simulated moisture readings</h4><p class="muted">A small visual record of recent moisture values captured during this browser session.</p><div class="chart" id="moistureChart"></div><p class="muted">No sensor data is collected from real soil.</p></div>
-          <div class="card"><h4>System summary</h4><div class="toggle-line"><div><strong>Project location</strong><p>Configured project site</p></div><span class="small">Brgy. Union</span></div><div class="toggle-line"><div><strong>System type</strong><p>Browser-based simulation</p></div><span class="small">Web app</span></div><div class="toggle-line"><div><strong>Data storage</strong><p>Saved locally in this browser</p></div><span class="small">Local</span></div><div class="toggle-line"><div><strong>Physical hardware</strong><p>Not connected</p></div><span class="status warn">Demo</span></div></div>
+          <div class="card"><h4>Recent simulated moisture readings</h4><p class="muted">A small visual record of recent moisture values captured during this browser session.</p><div class="chart" id="moistureChart" role="img" aria-label="Recent simulated moisture readings"></div><p class="muted">No sensor data is collected from real soil.</p></div>
+          <div class="card"><h4>System summary</h4><div class="toggle-line"><div><strong>Project location</strong><p>Configured project site</p></div><span class="small" id="reportLocation">Brgy. Union</span></div><div class="toggle-line"><div><strong>Pump stops</strong><p>Recorded simulation stops</p></div><span class="small" id="reportStops">0</span></div><div class="toggle-line"><div><strong>Last recorded activity</strong><p id="reportLastEvent">No activity recorded</p></div></div><div class="toggle-line"><div><strong>System type</strong><p>Browser-based simulation</p></div><span class="small">Web app</span></div><div class="toggle-line"><div><strong>Data storage</strong><p>Saved locally in this browser</p></div><span class="small">Local</span></div><div class="toggle-line"><div><strong>Physical hardware</strong><p>Not connected</p></div><span class="status warn">Demo</span></div></div>
         </div>
       </section>
 
@@ -137,6 +916,27 @@ button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid 
           <div class="card"><h4>Demo options</h4><div class="toggle-line"><div><strong>Automatic moisture increase</strong><p>When simulated pump is ON, moisture gradually rises.</p></div><label class="switch"><input id="autoIncrease" type="checkbox" checked><span class="slider"></span></label></div><div class="toggle-line"><div><strong>Keep data between visits</strong><p>Save plant records, settings, and history in this browser.</p></div><span class="status">Enabled</span></div><div class="controls"><button class="btn-outline" onclick="downloadBackup()">Export backup JSON</button><button class="btn-danger" onclick="resetAll()">Reset all demo data</button></div><p class="muted">Reset removes the locally saved demo records in this browser. Export a backup first if you need them.</p></div>
         </div>
         <div class="notice"><strong>Privacy and limitations:</strong> This prototype stores its records in local browser storage on this device. It has no online database, multi-user login, cloud synchronization, or real hardware integration. Do not use it to store sensitive personal information.</div>
+      </section>
+
+      <section class="page" id="page-developer">
+        <div class="page-head">
+          <div><h3>Created accounts</h3><p>Developer-only list of accounts registered on this browser.</p></div>
+        </div>
+        <div class="grid" style="grid-template-columns:repeat(2,minmax(0,1fr));margin-bottom:16px">
+          <div class="card"><div class="metric-label">Total accounts</div><div class="metric" id="developerAccountCount">0</div></div>
+          <div class="card"><div class="metric-label">Regular users</div><div class="metric" id="developerUserCount">0</div></div>
+        </div>
+        <div class="card">
+          <h4>Account directory</h4>
+          <div class="section-row"><input class="search" id="developerAccountSearch" type="search" aria-label="Search accounts" placeholder="Search by name or email..." oninput="renderDeveloperAccounts()"></div>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Name</th><th>Email</th><th>Account type</th><th>Actions</th></tr></thead>
+              <tbody id="developerAccountRows"></tbody>
+            </table>
+          </div>
+          <div class="empty hidden" id="developerAccountsEmpty">No accounts have been created.</div>
+        </div>
       </section>
 
       <section class="page" id="page-about">
@@ -179,6 +979,17 @@ function readAccounts(){
   if(!raw)return [];
   const accounts=JSON.parse(raw);
   if(!Array.isArray(accounts))throw new Error("Saved account data is invalid.");
+  let changed=false;
+  if(accounts.length){
+    if(!accounts.some(account=>account.role==="developer")){
+      accounts[0].role="developer";
+      changed=true;
+    }
+    accounts.forEach(account=>{
+      if(!account.role){account.role="user";changed=true}
+    });
+  }
+  if(changed)localStorage.setItem(AUTH_STORAGE_KEY,JSON.stringify(accounts));
   return accounts;
 }
 function saveAccounts(accounts){localStorage.setItem(AUTH_STORAGE_KEY,JSON.stringify(accounts))}
@@ -231,6 +1042,7 @@ function startSession(account,persist=true){
   }
   currentUser=account;
   document.getElementById("signedInName").textContent=account.name;
+  document.getElementById("developerNav").classList.toggle("hidden",account.role!=="developer");
   document.getElementById("authGate").classList.add("hidden");
   document.getElementById("appShell").classList.add("is-authenticated");
   init();
@@ -242,6 +1054,7 @@ function logout(){
   catch(e){logoutError="Could not clear the saved sign-in session."}
   currentUser=null;
   clearInterval(irrigationTimer);irrigationTimer=null;
+  document.getElementById("developerNav").classList.add("hidden");
   document.getElementById("appShell").classList.remove("is-authenticated");
   document.getElementById("authGate").classList.remove("hidden");
   document.getElementById("loginForm").reset();
@@ -284,7 +1097,7 @@ document.getElementById("signupForm").addEventListener("submit",async e=>{
     if(accounts.some(a=>a.email===email)){setAuthError("signupError","An account with this email already exists.");return}
     const salt=crypto.getRandomValues(new Uint8Array(16));
     const passwordHash=await hashPassword(password,salt);
-    const account={name,email,salt:bytesToBase64(salt),passwordHash:bytesToBase64(passwordHash)};
+    const account={name,email,role:accounts.length===0?"developer":"user",salt:bytesToBase64(salt),passwordHash:bytesToBase64(passwordHash)};
     accounts.push(account);
     saveAccounts(accounts);
     if(startSession(account))showToast("Account created and signed in.");
@@ -326,18 +1139,59 @@ function showToast(message){
   const el=document.getElementById("toast");el.textContent=message;el.classList.add("show");
   clearTimeout(toastTimer);toastTimer=setTimeout(()=>el.classList.remove("show"),2600);
 }
+function renderDeveloperAccounts(){
+  if(currentUser?.role!=="developer")return;
+  const accounts=readAccounts();
+  const query=(document.getElementById("developerAccountSearch").value||"").trim().toLowerCase();
+  const visibleAccounts=accounts.filter(account=>(account.name+" "+account.email).toLowerCase().includes(query));
+  document.getElementById("developerAccountCount").textContent=accounts.length;
+  document.getElementById("developerUserCount").textContent=accounts.filter(account=>account.role==="user").length;
+  document.getElementById("developerAccountRows").innerHTML=visibleAccounts.map(account=>{
+    const role=account.role==="developer"?"Developer":"Regular user";
+    const action=account.role==="user"?`<button class="btn-danger" type="button" data-delete-account="${esc(account.email)}">Delete</button>`:"—";
+    return `<tr><td><strong>${esc(account.name)}</strong></td><td>${esc(account.email)}</td><td><span class="status ${account.role==="developer"?"warn":"neutral"}">${role}</span></td><td>${action}</td></tr>`;
+  }).join("");
+  document.querySelectorAll("[data-delete-account]").forEach(button=>{
+    button.addEventListener("click",()=>deleteRegularAccount(button.dataset.deleteAccount));
+  });
+  const empty=document.getElementById("developerAccountsEmpty");
+  empty.textContent=accounts.length?"No accounts match your search.":"No accounts have been created.";
+  empty.classList.toggle("hidden",visibleAccounts.length>0);
+}
+function deleteRegularAccount(email){
+  if(currentUser?.role!=="developer"){
+    showToast("Only the developer account can remove users.");
+    return;
+  }
+  const accounts=readAccounts();
+  const account=accounts.find(item=>item.email===email);
+  if(!account||account.role!=="user")return;
+  if(!confirm(`Delete the regular user account for ${account.name} (${account.email})?`))return;
+  try{
+    saveAccounts(accounts.filter(item=>item.email!==email));
+    renderDeveloperAccounts();
+    showToast("Regular user account deleted.");
+  }catch{
+    showToast("Unable to delete the account. Check browser storage and try again.");
+  }
+}
 function navigate(page){
+  if(page==="developer"&&currentUser?.role!=="developer"){
+    showToast("This page is for the developer account only.");
+    return;
+  }
   document.querySelectorAll(".page").forEach(p=>p.classList.toggle("active",p.id==="page-"+page));
   document.querySelectorAll(".nav button").forEach(b=>{
     const active=b.dataset.page===page;
     b.classList.toggle("active",active);
     if(active)b.setAttribute("aria-current","page");else b.removeAttribute("aria-current");
   });
-  const names={dashboard:"Dashboard",plants:"Vegetable Management",irrigation:"Irrigation Control",history:"Watering History",reports:"Reports",settings:"Settings",about:"My Profile"};
+  const names={dashboard:"Dashboard",plants:"Vegetable Management",irrigation:"Irrigation Control",history:"Watering History",reports:"Reports",settings:"Settings",developer:"Developer Accounts",about:"My Profile"};
   document.getElementById("topTitle").textContent=names[page]||"Dashboard";
   if(page==="plants")renderPlants();
   if(page==="history")renderHistory();
   if(page==="reports")renderReports();
+  if(page==="developer")renderDeveloperAccounts();
   window.scrollTo({top:0,behavior:"smooth"});
 }
 document.querySelectorAll(".nav button").forEach(b=>b.addEventListener("click",()=>navigate(b.dataset.page)));
@@ -367,6 +1221,9 @@ function render(){
   ["dashPump","controlPump"].forEach(id=>document.getElementById(id).textContent=state.pump?"ON":"OFF");
   ["dashPumpBadge","controlPumpBadge"].forEach(id=>{const e=document.getElementById(id);e.textContent=state.pump?"Watering simulated":"Standby";e.className="status "+(state.pump?"warn":"neutral")});
   document.getElementById("dashPumpNote").textContent=state.pump?"Simulated pump is adding moisture":"No watering currently simulated";
+  const recommendation=document.getElementById("dashboardRecommendation");
+  recommendation.className="notice "+(v<=state.dry?"warn":"");
+  recommendation.textContent=state.pump?"Simulation active: the pump is on.":v<=state.dry?"Dry threshold reached; the simulated pump is off.":v>=state.target?"Target moisture reached; the simulated pump is off.":"Moisture is between your configured thresholds.";
   document.getElementById("controlPumpText").textContent=state.pump?"The simulated pump is ON. Moisture may rise automatically.":"The simulated pump is OFF.";
   document.getElementById("dashPlantCount").textContent=state.plants.length;
   document.getElementById("reportPlants").textContent=state.plants.length;
@@ -380,6 +1237,7 @@ function render(){
   document.getElementById("dashDry").textContent=state.dry+"%";
   document.getElementById("dashTarget").textContent=state.target+"%";
   document.getElementById("moistureSlider").value=v;
+  document.getElementById("moistureValue").value=v+"%";
   document.getElementById("autoToggle").checked=state.automatic;
   document.getElementById("dryThreshold").value=state.dry;
   document.getElementById("targetMoisture").value=state.target;
@@ -455,7 +1313,7 @@ function removePlant(id){
 function renderPlants(){
   const q=(document.getElementById("plantSearch")?.value||"").toLowerCase();
   const plants=state.plants.filter(p=>(p.name+" "+p.bed+" "+p.notes).toLowerCase().includes(q));
-  document.getElementById("plantCards").innerHTML=plants.length?plants.map(p=>`<div class="card plant-card"><div class="plant-badge">🌱</div><h4>${esc(p.name)}</h4><p class="muted">${esc(p.bed)}</p><p class="small">${p.date?"Planted: "+esc(p.date):"Planting date not set"}</p><p class="muted">${esc(p.notes||"No notes added")}</p><div class="controls"><button class="btn-outline" onclick="openPlantForm(${p.id})">Edit</button><button class="btn-danger" onclick="removePlant(${p.id})">Remove</button></div></div>`).join(""):'<div class="card empty">No vegetables found. Add a vegetable to get started.</div>';
+  document.getElementById("plantCards").innerHTML=plants.length?plants.map(p=>`<div class="card plant-card"><div class="plant-badge" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 4c-8 0-13 3.5-13 9a5 5 0 0 0 5 5c5.5 0 8-6 8-14Z"/><path d="M4 21c3-5 6-8 11-11"/></svg></div><h4>${esc(p.name)}</h4><p class="muted">${esc(p.bed)}</p><p class="small">${p.date?"Planted: "+esc(p.date):"Planting date not set"}</p><p class="muted">${esc(p.notes||"No notes added")}</p><div class="controls"><button class="btn-outline" onclick="openPlantForm(${p.id})">Edit</button><button class="btn-danger" onclick="removePlant(${p.id})">Remove</button></div></div>`).join(""):'<div class="card empty">No vegetables found. Add a vegetable to get started.</div>';
   document.getElementById("plantRows").innerHTML=plants.map(p=>`<tr><td><strong>${esc(p.name)}</strong></td><td>${esc(p.bed)}</td><td>${p.date?esc(p.date):"—"}</td><td>${esc(p.notes||"—")}</td><td><div class="table-actions"><button class="btn-outline" onclick="openPlantForm(${p.id})">Edit</button><button class="btn-danger" onclick="removePlant(${p.id})">Remove</button></div></td></tr>`).join("");
 }
 function renderHistory(){
@@ -467,7 +1325,12 @@ function renderHistory(){
 function renderReports(){
   const chart=document.getElementById("moistureChart");
   if(!chart)return;
-  chart.innerHTML=moistureSamples.map((v,i)=>`<div class="chart-col"><div class="chart-bar" title="${v}%" style="height:${Math.max(3,v)}%"></div><small>${i+1}</small></div>`).join("");
+  const stops=state.events.filter(event=>event.type==="stop").length;
+  document.getElementById("reportStops").textContent=stops;
+  document.getElementById("reportLocation").textContent=state.projectLocation;
+  const latest=state.events[0];
+  document.getElementById("reportLastEvent").textContent=latest?`${latest.details} · ${new Date(latest.time).toLocaleString()}`:"No activity recorded";
+  chart.innerHTML=moistureSamples.map((v,i)=>`<div class="chart-col" title="Sample ${i+1}: ${v}%"><div class="chart-bar" style="height:${Math.max(3,v)}%"></div><span class="chart-value">${v}%</span><small>${i+1}</small></div>`).join("");
 }
 function clearHistory(){
   if(!confirm("Clear all irrigation history records?"))return;
